@@ -3,11 +3,11 @@ import React from "react";
 const AboutComponent = () => {
   return (
     <div
-      className="w-10/12 mx-auto p-6 space-y-6 bg-white dark:bg-gray-900 
-    text-gray-700 dark:text-gray-300 h-screen overflow-y-auto"
+      className="space-y-6 w-full h-full p-1 sm:p-2 md:p-4
+    text-slate-800 dark:text-slate-50"
     >
-      <h1 className="text-2xl font-extrabold text-gray-800 dark:text-white tracking-wide text-center">
-        I'm Mahmoud Saadaoui
+      <h1 className="text-xl md:text-2xl font-extrabold text-gray-800 dark:text-white tracking-wide text-center">
+        Hello 👋😊 I'm Mahmoud Saadaoui
       </h1>
 
       <p className="leading-relaxed text-lg md:text-xl">
@@ -23,7 +23,7 @@ const AboutComponent = () => {
         fostering collaboration for successful project outcomes.
       </p>
 
-      <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mt-6">
+      <h2 className="text-xl md:text-2xl font-semibold text-gray-800 dark:text-gray-200 mt-6">
         Key Projects
       </h2>
       <p className="leading-relaxed text-lg md:text-xl">
@@ -53,7 +53,7 @@ const AboutComponent = () => {
         driving customer satisfaction through improved system efficiency.
       </p>
 
-      <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mt-6">
+      <h2 className="text-xl md:text-2xl font-semibold text-gray-800 dark:text-gray-200 mt-6">
         Personal and Professional Growth
       </h2>
       <p className="leading-relaxed text-lg md:text-xl">
@@ -61,23 +61,6 @@ const AboutComponent = () => {
         continuously improve my skills. Effective communication skills are
         crucial for facilitating collaboration and understanding among team
         members.
-      </p>
-
-      <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mt-6">
-        Technical Expertise
-      </h2>
-      <p className="leading-relaxed text-lg md:text-xl">
-        Proficient in{" "}
-        <span className="font-bold">
-          Laravel (TALL & VILT stack), Vue.js, Alpine.js, Livewire, Tailwind CSS
-        </span>
-        , Bootstrap, jQuery, JavaScript, PHP, and WordPress.
-      </p>
-
-      <p className="leading-relaxed text-lg md:text-xl">
-        Certified with a{" "}
-        <span className="font-bold">Bachelor’s Degree in Computer Science</span>
-        , I graduated in 2019.
       </p>
     </div>
   );

@@ -9,11 +9,16 @@ import WorkComponent from "@/components/work";
 export default function Home() {
   
   return (
-    <div className="w-screen h-screen bg-curvy-light-mode dark:bg-curvy-dark-mode bg-no-repeat dark:bg-darkBlue dark:text-white bg-contain bg-bottom">
+    <div className="w-screen h-screen bg-gray-50 dark:bg-slate-800 
+      overflow-hidden p-8 sm:p-10 md:p-14 relative 
+    ">
       <Header/>
       <LeftIcons/>
       <RightIcons/>
-      <WorkComponent/>
+      <div className="overflow-y-auto bg-gray-200 border border-gray-300 dark:border-gray-600 dark:bg-slate-900 text-slate-900 dark:text-white h-full">
+        <WorkComponent/>
+      </div>
+      
     </div>
   );
 }

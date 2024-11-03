@@ -16,24 +16,22 @@ const RightIcons = () => {
     toggleMode();
   };
   return (
-    <div className="flex flex-col items-center space-y-1 sm:space-y-3 fixed top-4 sm:top-20 right-3 bg-gray-100 dark:bg-gray-700 p-[2px] sm:p-2 rounded-sm">
-      {/* Switch Mode */}
+    <div className="flex flex-col items-center space-y-2 fixed 
+      top-14 right-1">
       <div
         className=" flex flex-col items-center cursor-pointer space-y-2"
         onClick={toggleTheme}
       >
         {darkMode ? (
-          <Image src={moon} alt="moon" width={25} height={20} />
+          <Image src={moon} alt="moon" width={20} height={20} />
         ) : (
-          <Image src={sun} alt="sun" width={25} height={20} />
+          <Image src={sun} alt="sun" width={20} height={20} />
         )}
       </div>
 
-        <div className="bg-gray-200 dark:bg-gray-800 w-full h-[2px]"></div>
-
       {/* Switch Language */}
       <div onClick={toggleOpen}>
-        <IoLanguage className="text-xl sm:text-2xl"/>
+        <IoLanguage className="text-xl text-blue-500"/>
       </div>
       {open && (
         <div

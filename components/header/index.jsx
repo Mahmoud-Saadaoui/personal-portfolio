@@ -1,42 +1,29 @@
 import React from "react";
-import { GoHomeFill } from "react-icons/go";
-import { MdHomeRepairService } from "react-icons/md";
-import { FaFolderOpen } from "react-icons/fa";
-import { BiLogoTelegram } from "react-icons/bi";
+
+const Button = ({text}) => {
+  return (
+    <button className="dark:text-gray-100">
+      {text}
+    </button>
+  )
+}
 
 const Header = () => {
+  const buttonsArr = ["Home", "About", "Work", "Projects", "Contact"]
   return (
-    <div className="w-screen flex flex-col sm:flex-row justify-between items-center p-4 dark:bg-gray-900">
-      {/* Logo Section */}
-      <h2 className="font-extrabold text-zinc-600 dark:text-white text-lg md:text-2xl">
+    <div className="">
+      <h2 className="fixed top-1 left-1 font-extrabold text-slate-800 dark:text-white text-lg">
         saadaouidev.com
       </h2>
 
-      {/* Navigation Links */}
-      <div className="flex flex-row space-x-4 md:space-x-6">
-        {/* Home Button */}
-        <button className="text-gray-600 dark:text-gray-100 transition duration-300 transform hover:text-red-400 dark:hover:text-red-500 hover:scale-110">
-          <GoHomeFill className="text-2xl md:hidden text-slate-500" />
-          <span className="hidden md:inline text-lg md:text-xl">Home</span>
-        </button>
+      <button className="fixed top-1 right-1 text-red-500 hover:font-bold font-semibold">Resume</button>
 
-        {/* Services Button */}
-        <button className="text-gray-600 dark:text-gray-100  transition duration-300 transform hover:text-red-400 dark:hover:text-red-500 hover:scale-110">
-          <MdHomeRepairService className="text-2xl md:hidden text-slate-500" />
-          <span className="hidden md:inline text-lg md:text-xl">Services</span>
-        </button>
-
-        {/* Projects Button */}
-        <button className="text-gray-600 dark:text-gray-100  transition duration-300 transform hover:text-red-400 dark:hover:text-red-500 hover:scale-110">
-          <FaFolderOpen className="text-2xl md:hidden text-slate-500" />
-          <span className="hidden md:inline text-lg md:text-xl">Projects</span>
-        </button>
-
-        {/* Contact Button */}
-        <button className="text-gray-600 dark:text-gray-100  transition duration-300 transform hover:text-red-400 dark:hover:text-red-500 hover:scale-110">
-          <BiLogoTelegram className="text-2xl md:hidden text-slate-500" />
-          <span className="hidden md:inline text-lg md:text-xl">Contact</span>
-        </button>
+      <div className="fixed bottom-0 sm:bottom-1 md:bottom-4 left-1/2 transform -translate-x-1/2 flex justify-center space-x-2 sm:space-x-3 md:space-x-5">
+        {
+          buttonsArr.map((btnArr, index) => (
+            <Button text={btnArr} key={index}/>
+          ))
+        }
       </div>
     </div>
   );
