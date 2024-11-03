@@ -2,7 +2,7 @@ import React from "react";
 
 const WorkCark = ({text, paragraph}) => {
   return (
-    <div className="rounded-md shadow-lg p-6 transition duration-300 hover:shadow-xl bg-slate-200 border border-slate-30000 dark:bg-slate-700 dark:border-slate-800">
+    <div className="rounded-md shadow-lg p-6 transition duration-300 hover:shadow-xl bg-slate-200 border border-slate-300 dark:bg-slate-700 dark:border-slate-800">
       <h3 className="text-lg md:text-xl font-semibold text-slate-700 dark:text-slate-100 mb-2">
         {text}
       </h3>

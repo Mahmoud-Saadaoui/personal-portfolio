@@ -22,12 +22,6 @@ module.exports = {
         accentBlue: 'hsl(198, 60%, 50%)',
         lightRed: 'hsl(0, 100%, 63%)',
       },
-      backgroundImage: (theme) => ({
-        'logo-dark-mode': "url('/dark-logo.png')",
-        'logo-light-mode': "url('/light-logo.png')",
-        'curvy-dark-mode': "url('/bg-curvy-dark-mode.svg')",
-        'curvy-light-mode': "url('/bg-curvy-light-mode.svg')",
-      }),
     },
   },
   plugins: [],

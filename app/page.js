@@ -4,6 +4,7 @@ import RightIcons from "@/components/icons/RightIcons";
 import HomeComponent from "@/components/home";
 import AboutComponent from "@/components/about";
 import WorkComponent from "@/components/work";
+import Portfolio from "@/components/portfolio";
 
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
       <LeftIcons/>
       <RightIcons/>
       <div className="overflow-y-auto bg-gray-200 border border-gray-300 dark:border-gray-600 dark:bg-slate-900 text-slate-900 dark:text-white h-full">
-        <WorkComponent/>
+        <Portfolio/>
       </div>
       
     </div>
