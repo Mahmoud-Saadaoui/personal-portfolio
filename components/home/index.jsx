@@ -5,7 +5,7 @@ import profilePhoto from "@/public/profile-photo.jpg";
 const HomeComponent = () => {
   return (
       <div className="h-full w-full px-2 flex flex-col items-center justify-center space-y-4">
-        <div className="flex-shrink-0 rounded-full overflow-hidden shadow-lg border-4 border-slate-500">
+        <div className="flex-shrink-0 rounded-full overflow-hidden shadow-lg border-4 border-slate-500 mt-8">
           <Image
             src={profilePhoto}
             alt="Profile Photo"

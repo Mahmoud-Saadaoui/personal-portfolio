@@ -17,12 +17,18 @@ const Header = ({setActiveComponent}) => {
 
       <button className="fixed top-1 right-1 text-red-500 hover:font-bold font-semibold">Resume</button>
 
-      <div className="fixed bottom-0 sm:bottom-1 md:bottom-4 left-1/2 transform -translate-x-1/2 flex justify-center space-x-2 sm:space-x-3 md:space-x-5">
+      <div className="fixed bottom-1 sm:bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 flex justify-center space-x-2 sm:space-x-3 md:space-x-5 bg-slate-200 dark:bg-slate-700 p-2 rounded-xl">
         {
           buttonsArr.map((btnArr, index) => (
-            <button className={`dark:text-gray-100 ${index === activeIndex && "active"}`} key={index} onClick={()=>showActiveComponent(btnArr, index)}>
-              {btnArr}
-            </button>
+            <button
+              key={index}
+              onClick={() => showActiveComponent(btnArr, index)}
+              className={`md:px-3 md:py-1 rounded-lg transition-all duration-500 ${
+                index === activeIndex ? "active text-white" : "dark:text-gray-100"
+              }`}
+            >
+            {btnArr}
+          </button>
           ))
         }
       </div>

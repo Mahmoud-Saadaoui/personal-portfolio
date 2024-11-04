@@ -11,6 +11,7 @@ import { useState } from "react";
 
 export default function Home() {
   const [activeComponent, setActiveComponent] = useState('home')
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const renderComponent = () => {
     switch (activeComponent) {
@@ -28,18 +29,25 @@ export default function Home() {
         return <HomeComponent />;
     }
   };
+
+  const handleSetActiveComponent = (component) => {
+    setIsAnimating(true);
+    setTimeout(() => {
+      setActiveComponent(component);
+      setIsAnimating(false);
+    }, 300);
+  };
   
   return (
     <div className="w-screen h-screen bg-gray-50 dark:bg-slate-800 
-      overflow-hidden p-8 sm:p-10 md:p-14 relative 
-    ">
-      <Header setActiveComponent={setActiveComponent}/>
+      overflow-hidden pb-14 px-10 pt-8 md:p-20">
+      <Header setActiveComponent={handleSetActiveComponent}/>
       <LeftIcons/>
       <RightIcons/>
       <div className="overflow-y-auto bg-gray-200 border border-gray-300 dark:border-gray-600 dark:bg-slate-900 text-slate-900 dark:text-white h-full">
-        {
-          renderComponent()
-        }
+        <div className={`transition-container ${isAnimating ? "fade-out" : "fade-in"}`}>
+          {renderComponent()}
+        </div>
       </div>
       
     </div>
