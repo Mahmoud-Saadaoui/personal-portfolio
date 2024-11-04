@@ -1,15 +1,14 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 
-const Button = ({text}) => {
-  return (
-    <button className="dark:text-gray-100">
-      {text}
-    </button>
-  )
-}
-
-const Header = () => {
+const Header = ({setActiveComponent}) => {
+  const [activeIndex, setActiveIndex] = useState(0)
   const buttonsArr = ["Home", "About", "Work", "Projects", "Contact"]
+
+  const showActiveComponent = (text, index) => {
+    setActiveComponent(text)
+    setActiveIndex(index)
+  }
   return (
     <div className="">
       <h2 className="fixed top-1 left-1 font-extrabold text-slate-800 dark:text-white text-lg">
@@ -21,7 +20,9 @@ const Header = () => {
       <div className="fixed bottom-0 sm:bottom-1 md:bottom-4 left-1/2 transform -translate-x-1/2 flex justify-center space-x-2 sm:space-x-3 md:space-x-5">
         {
           buttonsArr.map((btnArr, index) => (
-            <Button text={btnArr} key={index}/>
+            <button className={`dark:text-gray-100 ${index === activeIndex && "active"}`} key={index} onClick={()=>showActiveComponent(btnArr, index)}>
+              {btnArr}
+            </button>
           ))
         }
       </div>
