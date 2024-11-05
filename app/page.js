@@ -1,13 +1,12 @@
 "use client"
-import Header from "@/components/header";
-import LeftIcons from "@/components/icons/LeftIcons";
-import RightIcons from "@/components/icons/RightIcons";
+import { useState } from "react";
 import HomeComponent from "@/components/home";
 import AboutComponent from "@/components/about";
 import WorkComponent from "@/components/work";
 import Portfolio from "@/components/portfolio";
 import Contact from "@/components/contact";
-import { useState } from "react";
+import Main from "@/components/main";
+import SlideNavigator from "@/components/slide-navigator";
 
 export default function Home() {
   const [activeComponent, setActiveComponent] = useState('home')
@@ -19,8 +18,6 @@ export default function Home() {
         return <HomeComponent />;
       case 'About':
         return <AboutComponent />;
-      case 'Contact':
-        return <Contact />;
       case 'Work':
         return <WorkComponent />;
       case 'Projects':
@@ -39,17 +36,14 @@ export default function Home() {
   };
   
   return (
-    <div className="w-screen h-screen bg-gray-50 dark:bg-slate-800 
-      overflow-hidden pb-14 px-10 pt-8 md:p-20">
-      <Header setActiveComponent={handleSetActiveComponent}/>
-      <LeftIcons/>
-      <RightIcons/>
-      <div className="overflow-y-auto bg-gray-200 border border-gray-300 dark:border-gray-600 dark:bg-slate-900 text-slate-900 dark:text-white h-full">
+    <div className="w-screen h-screen bg-light dark:bg-dark overflow-hidden pb-16 px-10 pt-8 md:p-20">
+      <Main/>
+      <div className="h-full w-full overflow-y-auto border border-muted">
         <div className={`transition-container ${isAnimating ? "fade-out" : "fade-in"}`}>
           {renderComponent()}
-        </div>
+        </div>     
       </div>
-      
+      <SlideNavigator setActiveComponent={handleSetActiveComponent}/>
     </div>
   );
 }

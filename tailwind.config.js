@@ -14,13 +14,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        darkBlue: 'hsl(217, 28%, 15%)',
-        darkBlue1: 'hsl(218, 28%, 13%)',
-        darkBlue2: 'hsl(216, 53%, 9%)',
-        darkBlue3: 'hsl(219, 30%, 18%)',
-        accentCyan: 'hsl(176, 68%, 64%)',
-        accentBlue: 'hsl(198, 60%, 50%)',
-        lightRed: 'hsl(0, 100%, 63%)',
+        light: "#f8fafc",
+        dark: "#262626",
+        muted: "#94a3b8",
+        // muted: "#737373",
+        buttons: "#67e8f9",
       },
     },
   },

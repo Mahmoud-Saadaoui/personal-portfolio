@@ -2,9 +2,8 @@
 import React, { useContext, useState } from "react";
 import { AppContext } from "@/context/AppContext";
 import { IoLanguage } from "react-icons/io5";
-import Image from "next/image";
-import sun from "@/public/sun.png";
-import moon from "@/public/moon.png";
+import { MdWbSunny } from "react-icons/md";
+import { FaMoon } from "react-icons/fa";
 
 const RightIcons = () => {
   const { darkMode, toggleMode } = useContext(AppContext);
@@ -16,43 +15,39 @@ const RightIcons = () => {
     toggleMode();
   };
   return (
-    <div className="flex flex-col items-center space-y-2 fixed 
-      top-14 right-1">
+    <div className="flex flex-col items-center space-y-4 fixed top-8 md:top-20 right-3 md:right-9">
       <div
-        className=" flex flex-col items-center cursor-pointer space-y-2"
+        className="flex flex-col items-center cursor-pointer space-y-2"
         onClick={toggleTheme}
       >
         {darkMode ? (
-          <Image src={moon} alt="moon" width={20} height={20} />
+          <MdWbSunny className="text-xl text-muted  cursor-pointer"/>
         ) : (
-          <Image src={sun} alt="sun" width={20} height={20} />
+          <FaMoon className="text-xl text-muted  cursor-pointer"/>
         )}
       </div>
 
       {/* Switch Language */}
       <div onClick={toggleOpen}>
-        <IoLanguage className="text-xl text-blue-500"/>
+        <IoLanguage className="text-xl text-muted  cursor-pointer"/>
       </div>
+
       {open && (
         <div
           onMouseEnter={() => setOpen(true)}
           onMouseLeave={() => setOpen(false)}
-          className="absolute top-full right-0 mb-4 w-48 bg-white dark:bg-gray-700 
-                   border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg 
-                   py-2 transition-all duration-300"
+          className="absolute top-full right-0 mb-4 w-48 border bg-white dark:bg-dark text-dark dark:text-light border-muted rounded-lg shadow-lg py-2 transition-all duration-300"
         >
-          <div className="p-2 text-darkBlue3 dark:text-white">
+          <div className="p-2 text-dark dark:text-light">
             <label className="font-bold" htmlFor="language-select">
-              select
+              Select Language
             </label>
             <select
               id="language-select"
-            //   defaultValue={localActive}
-            //   onChange={onSelectChange}
-            //   disabled={isPending}
-              className="mt-1 block w-full border border-coolGray dark:border-gray-600 
-                       bg-white dark:bg-darkBlue text-darkBlue dark:text-white 
-                       rounded-lg focus:outline-none focus:ring focus:ring-accentBlue"
+              // defaultValue={localActive}
+              // onChange={onSelectChange}
+              // disabled={isPending}
+              className="mt-1 block w-full border border-muted rounded-lg focus:outline-none bg-light text-dark dark:bg-dark dark:text-white"
             >
               <option value="en">English</option>
               <option value="fr">Français</option>
