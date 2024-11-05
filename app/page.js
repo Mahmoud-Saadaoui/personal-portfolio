@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <div className="w-screen h-screen bg-light dark:bg-dark overflow-hidden pb-16 px-10 pt-8 md:p-20">
       <Main/>
-      <div className="h-full w-full overflow-y-auto border border-muted">
+      <div className="h-full w-full overflow-y-auto border border-muted flex justify-center">
         <div className={`transition-container ${isAnimating ? "fade-out" : "fade-in"}`}>
           {renderComponent()}
         </div>     

@@ -16,7 +16,7 @@ const WorkCark = ({ text, paragraph }) => {
 
 const WorkComponent = () => {
   return (
-    <div className="mx-auto px-2 md:px-4 space-y-4 w-full h-full">
+    <div className="flex flex-col justify-center min-h-screen mx-auto px-2 md:px-4 space-y-4">
       <Title title="I love working on..."/>
 
       <div className="flex flex-col space-y-2 md:space-y-4">

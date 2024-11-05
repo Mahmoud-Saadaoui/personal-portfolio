@@ -5,7 +5,7 @@ import Title from "../heading/index.jsx";
 
 export default function Portfolio() {
   return (
-    <div className="mx-auto px-2 md:px-4 space-y-4 w-full h-full text-muted">
+    <div className="flex flex-col justify-center min-h-screen mx-auto px-2 md:px-4 space-y-4 text-muted">
       <Title title="Side Fun Projects ..." />
       <div className="flex flex-col space-y-3 mb-2">
         {data.map((el) => (

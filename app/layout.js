@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={ubuntu.className}
+        className={`${ubuntu.className}`}
       >
         <AppProvider>
           {children}
