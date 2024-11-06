@@ -5,8 +5,8 @@ import Title from "../heading";
 
 const HomeComponent = () => {
   return (
-    <div className="h-full w-full px-2 md:px-4 flex flex-col items-center justify-center space-y-4">
-      <div className="flex-shrink-0 rounded-full overflow-hidden shadow-lg border-4 border-buttons ">
+    <div className="px-2 md:px-4 flex flex-col items-center justify-center space-y-4 py-1">
+      <div className="flex-shrink-0 rounded-full overflow-hidden shadow-lg border-4 border-buttons">
         <Image
           src={profilePhoto}
           alt="Profile Photo"

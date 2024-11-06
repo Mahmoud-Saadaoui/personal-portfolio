@@ -3,8 +3,8 @@ import Title from "../heading";
 
 const AboutComponent = () => {
   return (
-    <>
-      <div className="flex flex-col justify-center min-h-screen p-2 md:p-4 text-muted text-md sm:text-lg">
+    <div className="min-h-full">
+      <div className="p-2 md:p-4 text-muted text-md sm:text-lg">
         <Title title="Hello 👋😊 I'm Mahmoud Saadaoui" />
 
         <p className="leading-relaxed text-md md:text-lg">
@@ -30,7 +30,7 @@ const AboutComponent = () => {
           exercitationem obcaecati cupiditate placeat veniam. Consequuntur, a?
         </p>
       </div>
-    </>
+    </div>
   );
 };
 
