@@ -1,9 +1,10 @@
-import Image from "next/image";
-import React from "react";
-import profilePhoto from "@/public/profile-photo.jpg";
-import Title from "../heading";
+import React from 'react'
+import Image from "next/image"
+import profilePhoto from '../../../public/profile-photo.jpg'
+import { useTranslations } from 'next-intl'
 
 const HomeComponent = () => {
+  const t = useTranslations("Home")
   return (
     <div className="px-2 md:px-4 flex flex-col items-center justify-center space-y-4 py-1">
       <div className="flex-shrink-0 rounded-full overflow-hidden shadow-lg border-4 border-buttons">
@@ -15,13 +16,10 @@ const HomeComponent = () => {
         />
       </div>
 
-      <div className="text-center max-w-lg space-y-4 text-muted">
-        <Title title="I'm Mahmoud Saadaoui"/>
+      <div className="text-center max-w-lg space-y-4 text-text_light dark:text-text_dark">
         <p className="font font-semibold">Web Developer</p>
         <p className="text-md md:text-lg sm:leading-relaxed">
-          I love building responsive and secure applications, 
-          I use JavaScript along with the React.js and Node.js frameworks. 
-          I am passionate about creating innovative and high-performance solutions with Next.js and TypeScript.
+          {t('introduction')}
         </p>
 
         <button className="mb-4 px-5 py-2 bg-primary bg-buttons text-dark dark:text-white font-semibold rounded-lg">
@@ -29,7 +27,7 @@ const HomeComponent = () => {
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default HomeComponent;
+export default HomeComponent

@@ -11,12 +11,12 @@ const Main = () => {
         saadaouidev.com
       </h2>
 
-      <div className="fixed bottom-16 md:bottom-20 left-3 md:left-9 flex flex-col space-y-4">
-        <FaLinkedinIn className="text-xl text-muted"/>
-        <FaYoutube className="text-xl text-muted"/>
-        <FaGithub className="text-xl text-muted"/>
-        <IoLogoWhatsapp className="text-xl text-muted"/>
-        <FaTelegram className="text-xl text-muted"/>
+      <div className="fixed bottom-16 md:bottom-20 left-3 md:left-9 flex flex-col space-y-4 text-xl text-text_light dark:text-text_dark">
+        <FaLinkedinIn/>
+        <FaYoutube/>
+        <FaGithub/>
+        <IoLogoWhatsapp/>
+        <FaTelegram/>
       </div>
 
       <RightIcons />

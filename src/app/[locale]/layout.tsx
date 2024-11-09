@@ -1,6 +1,9 @@
 import { AppProvider } from "@/context/AppContext";
-import "./globals.css";
+import "../globals.css";
 import { Tajawal } from "next/font/google";
+import { getMessages } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
+import React from "react";
 
 const ubuntu = Tajawal({
   subsets: ["arabic"],
@@ -23,19 +26,33 @@ export const metadata = {
     },
   ],
   icons: {
-    icon: "/favicon.png",
+    icon: "../../../public/favicon.png",
   },
 };
 
-export default function RootLayout({ children }) {
+type Props = {
+  children: React.ReactNode;
+  params: {
+    locale: string 
+  };
+}
+
+export default async function RootLayout({
+  children,
+  params,
+}: Props) {
+  const { locale } = params
+  const messages = await getMessages({ locale });
   return (
-    <html lang="en">
+    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <body
         className={`${ubuntu.className}`}
       >
-        <AppProvider>
-          {children}
-        </AppProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <AppProvider>
+            {children}
+          </AppProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

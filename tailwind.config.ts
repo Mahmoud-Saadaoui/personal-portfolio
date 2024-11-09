@@ -1,9 +1,10 @@
-/** @type {import('tailwindcss').Config} */
+import { config } from "process";
+
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     screens: {
@@ -16,8 +17,8 @@ module.exports = {
       colors: {
         light: "#f8fafc",
         dark: "#262626",
-        muted: "#94a3b8",
-        // muted: "#737373",
+        text_light: "#737373",
+        text_dark: "#A3A3A3",
         buttons: "#67e8f9",
       },
     },
@@ -25,3 +26,5 @@ module.exports = {
   plugins: [],
   darkMode: "class",
 };
+
+export default config;

@@ -1,12 +1,21 @@
 "use client"
-import { createContext, useState } from "react";
+import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState } from "react"
 
-export const AppContext = createContext({
+type Props = {
+    children: ReactNode;
+};
+
+type AppContextType = {
+    darkMode: boolean,
+    toggleMode: () => void,
+} | null
+
+const AppContext = createContext<AppContextType>({
     darkMode: false,
     toggleMode: () => {},
-}) 
+})
 
-export const AppProvider = ({ children }) => {
+export const AppProvider = ({ children }: Props) => {
     const [darkMode, setDarkMode] = useState(false)
 
     const toggleMode = () => {
@@ -21,3 +30,5 @@ export const AppProvider = ({ children }) => {
         </AppContext.Provider>
     )
 }
+
+export { AppContext };
