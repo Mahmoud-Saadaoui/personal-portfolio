@@ -9,5 +9,22 @@
         "about": "عنّي",
         "work": "خدماتي",
         "portfolio": "أعمالي"
+    },
+    "Work": {
+        "I_Love_Working_On": "أحب العمل على ...",
+        "React_js": "React.js",
+        "React_js_Paragraph": "إطار عملي الرئيسي هو React.js ويمكنني أيضًا استخدام Redux Toolkit لإدارة الحالة.",
+        "Node_js": "Node.js",
+        "Node_Paragraph": "ماهر في تطوير النظم الخلفية باستخدام إطار عمل Express.js لإنشاء واجهات برمجية قوية.",
+        "Next_js": "Next.js مع TypeScript",
+        "Next_js_paragraph": "أستخدم Next.js كإطار عمل متكامل للواجهة الأمامية والخلفية مع TypeScript، مدعوم بقاعدة بيانات MongoDB أو PostgreSQL.",
+        "Tailwind": "Tailwind",
+        "Tailwind_Paragraph": "أعتقد أنه أفضل أداة لـ CSS لإنشاء تصميمات مستجيبة وسهلة الوصول."
+    },
+    "Projects": {
+        "title": "مشاريع جانبية ممتعة ...",
+        "Developers_Tawassol_Intro": "هذا المشروع هو تطبيق شبكة اجتماعية يتيح للمستخدمين التفاعل مع بعضهم البعض ومشاركة معلوماتهم الشخصية والمهنية.",
+        "Bookly_Intro": "نظام إدارة مكتبة باستخدام تقنيات MERN",
+        "Property_Pulse_Intro": "موقع لتأجير العقارات مبني باستخدام Next.js 14، يتيح للمستخدمين تصفح وإدارة قوائم العقارات بأحدث الميزات."
     }
 }

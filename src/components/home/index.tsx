@@ -7,7 +7,7 @@ const HomeComponent = () => {
   const t = useTranslations("Home")
   return (
     <div className='mx-auto flex items-center justify-center'>
-      <div className="px-2 md:px-4 flex flex-col items-start justify-center space-y-4 py-1">
+      <div className="md:px-4 flex flex-col items-start justify-center space-y-4 py-1">
       <div className='flex items-center'>
         <div className="flex-shrink-0 rounded-full overflow-hidden shadow-lg">
           <Image

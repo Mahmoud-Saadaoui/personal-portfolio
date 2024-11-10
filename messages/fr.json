@@ -9,5 +9,22 @@
         "about": "A Propos",
         "work": "Services",
         "portfolio": "Projets"
-    }
+    }, 
+    "Work": {
+        "I_Love_Working_On": "J'adore travailler sur ...",
+        "React_js": "React.js",
+        "React_js_Paragraph": "Mon principal framework est React.js et je peux également utiliser Redux Toolkit pour la gestion de l'état.",
+        "Node_js": "Node.js",
+        "Node_Paragraph": "Compétent en développement backend utilisant le framework Express.js pour créer des API robustes.",
+        "Next_js": "Next.js avec TypeScript",
+        "Next_js_paragraph": "J'utilise Next.js comme framework full-stack avec TypeScript, associé à MongoDB ou PostgreSQL.",
+        "Tailwind": "Tailwind",
+        "Tailwind_Paragraph": "Je pense que c'est le meilleur outil pour le CSS pour créer des designs réactifs et accessibles."
+    },
+    "Projects": {
+        "title": "Projets Ludiques ...",
+        "Developers_Tawassol_Intro": "Ce projet est une application de réseau social qui permet aux utilisateurs d'interagir entre eux et de partager leurs informations personnelles et professionnelles.",
+        "Bookly_Intro": "Système de gestion de bibliothèque utilisant les technologies MERN",
+        "Property_Pulse_Intro": "Un site de location de propriétés construit avec Next.js 14, permettant aux utilisateurs de parcourir, rechercher et gérer des annonces immobilières avec les dernières fonctionnalités."
+      }
 }
