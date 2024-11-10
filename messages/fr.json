@@ -1,5 +1,13 @@
 {
     "Home": {
-        "introduction": "Bonjour, je suis Mahmoud Saadaoui, développeur web de Tunisie passionné par la technologie. Je travaille comme développeur front-end et back-end, en utilisant des outils modernes tels que JavaScript, React.js, Node.js, et TypeScript pour créer des applications interactives et sécurisées. Je veille toujours à rester informé des dernières tendances du domaine pour innover des solutions techniques performantes et créatives.\n\nJe souhaite rejoindre une équipe de développement professionnelle pour appliquer mon expertise dans des projets techniques innovants, acquérir de nouvelles compétences, et contribuer à la communauté des développeurs."
+        "about": "Bonjour, je suis Mahmoud de Tunisie, développeur web spécialisé en React, Next, Node, TypeScript et JavaScript. J'adore créer des sites web avec un bon design d'interface utilisateur et une bonne expérience utilisateur, et je suis également passionné par les nouvelles technologies.",
+        "fullname": "Saadaoui Mahmoud",
+        "role": "Développeur FullStack",
+        "cv": "Télécharger mon CV"
+    },
+    "Slider": {
+        "about": "A Propos",
+        "work": "Services",
+        "portfolio": "Projets"
     }
 }

@@ -5,18 +5,20 @@ import PortfolioComponent from "@/components/portfolio";
 import WorkComponent from "@/components/work";
 import Main from "@/components/main";
 import SlideNavigator from "@/components/slide-navigator";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("Slider")
   const [activeComponent, setActiveComponent] = useState('home')
   const [isAnimating, setIsAnimating] = useState(false);
 
   const renderComponent = () => {
     switch (activeComponent) {
-      case 'Home':
+      case t('about'):
         return <HomeComponent />;
-      case 'Work':
+      case t('work'):
         return <WorkComponent />;
-      case 'Projects':
+      case t('portfolio'):
         return <PortfolioComponent />;
       default:
         return <HomeComponent />;

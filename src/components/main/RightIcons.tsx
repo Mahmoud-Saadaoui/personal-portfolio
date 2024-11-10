@@ -9,10 +9,10 @@ import { useLocale } from "next-intl";
 
 const RightIcons = () => {
   const [isPending, startTransition] = useTransition();
-    const context = useContext(AppContext);
-    if (!context) {
-      throw new Error("AppContext must be used within an AppProvider");
-    }
+  const context = useContext(AppContext);
+  if (!context) {
+    throw new Error("AppContext must be used within an AppProvider");
+  }
   const { darkMode, toggleMode } = context
   const [open, setOpen] = useState(false);
 
@@ -39,36 +39,36 @@ const RightIcons = () => {
         onClick={toggleTheme}
       >
         {darkMode ? (
-          <MdWbSunny className="text-xl text-text_light dark:text-text_dark  cursor-pointer"/>
+          <MdWbSunny className="text-xl text-text_light dark:text-text_dark  cursor-pointer" />
         ) : (
-          <FaMoon className="text-xl text-text_light dark:text-text_dark  cursor-pointer"/>
+          <FaMoon className="text-xl text-text_light dark:text-text_dark  cursor-pointer" />
         )}
       </div>
 
       {/* Switch Language */}
-      <div onClick={toggleOpen}>
-        <IoLanguage className="text-xl text-text_light dark:text-text_dark  cursor-pointer"/>
-      </div>
-
-      {open && (
+      {open ? (
         <div
           onMouseEnter={() => setOpen(true)}
           onMouseLeave={() => setOpen(false)}
-          className="absolute top-9 -right-1 mb-4 w-9 text-dark dark:text-light transition-all duration-300 z-50"
+          className="absolute top-2 -right-2 mb-4 w-10 text-dark dark:text-light transition-all duration-300 z-50"
         >
           <div className="p-2 text-text_light dark:text-text_dark">
             <select
               id="language-select"
               defaultValue={localActive}
-                onChange={onSelectChange}
-                disabled={isPending}
-              className="mt-1 block w-full border border-text_light dark:border-text_dark rounded-lg focus:outline-none bg-light text-dark_text dark:bg-dark dark:text-dark_text"
+              onChange={onSelectChange}
+              disabled={isPending}
+              className="mt-1 block w-full border border-text_light dark:border-text_dark rounded-sm focus:outline-none bg-light text-dark_text dark:bg-dark dark:text-dark_text"
             >
               <option value="en">En</option>
               <option value="fr">Fr</option>
               <option value="ar">ع</option>
             </select>
           </div>
+        </div>
+      ) : (
+        <div onClick={toggleOpen}>
+          <IoLanguage className="text-xl text-text_light dark:text-text_dark  cursor-pointer" />
         </div>
       )}
     </div>

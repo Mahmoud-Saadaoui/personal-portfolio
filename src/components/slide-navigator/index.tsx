@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import React, { Dispatch, SetStateAction, useState } from 'react'
 
 type SlideNavigatorProps = {
@@ -5,15 +6,16 @@ type SlideNavigatorProps = {
 }
 
 const SlideNavigator = ({ setActiveComponent }: SlideNavigatorProps) => {
+    const t = useTranslations("Slider")
     const [activeIndex, setActiveIndex] = useState(0);
-    const buttonsArr = ["Home", "About", "Work", "Projects"];
+    const buttonsArr = [t('about'), t('work'), t('portfolio')];
 
     const showActiveComponent = (text: string, index: number) => {
         setActiveComponent(text);
         setActiveIndex(index);
     };
     return (
-        <div className="fixed bottom-1 md:bottom-4 left-1/2 transform -translate-x-1/2 flex justify-center space-x-2 sm:space-x-3 md:space-x-5 p-2 border text-text_light dark:text-text_dark dark:bg-dark rounded-xl">
+        <div className="w-full fixed bottom-1 md:bottom-4 left-1/2 transform -translate-x-1/2 flex justify-center space-x-2 sm:space-x-3 md:space-x-5 p-2 text-dark dark:text-white dark:bg-dark rounded-xl">
             {buttonsArr.map((btnArr, index) => (
                 <button
                     key={index}
