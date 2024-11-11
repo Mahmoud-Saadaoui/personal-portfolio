@@ -17,7 +17,7 @@ const PortfolioComponent = () => {
             <div className="flex justify-between items-center">
               <p className="font-semibold text-md md:text-lg dark:text-white">{el.title}</p>
               <div className="text-xl text-dark dark:text-light">
-                <PiArrowSquareUpRightLight />
+                <a href={`${el.links}`} target='_blanc'><PiArrowSquareUpRightLight /></a>
               </div>
             </div>
             <p className="text-md md:text-lg">{t(el.description.intro)}</p>
