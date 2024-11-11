@@ -1,22 +1,23 @@
 import React from "react";
 import RightIcons from "./RightIcons";
 import { FaLinkedinIn } from "react-icons/fa6";
-import { FaYoutube, FaGithub, FaTelegram } from "react-icons/fa";
+import { FaYoutube, FaGithub } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
 
 const Main = () => {
   return (
     <div>
       <h2 className="fixed top-2 md:top-9 left-9 md:left-20 font-unlock text-sm md:text-md text-dark dark:text-white">
-        contact@saadaouidev.com
+        <a href="mailto:contact@saadaouidev.com">contact@saadaouidev.com</a>
       </h2>
 
       <div className="fixed bottom-16 md:bottom-20 left-3 md:left-9 flex flex-col space-y-4 text-xl text-text_light dark:text-text_dark">
-        <FaLinkedinIn/>
-        <FaYoutube/>
-        <FaGithub/>
-        <IoLogoWhatsapp/>
-        <FaTelegram/>
+        <a href="https://www.linkedin.com/in/saadaoui-mahmoud" target="_blanc"><FaLinkedinIn/></a>
+        <a href="https://www.youtube.com/@mahmoud_saadaoui" target="_blanc"><FaYoutube/></a>
+        <a href="https://github.com/Saadaoui-Forkan" target="_blanc"><FaGithub/></a>
+        <a href="https://wa.me/21627987081" target="_blanc"><IoLogoWhatsapp/></a>
+        <a href="mailto:saadaouidev@gmail.com"><MdEmail/></a>
       </div>
 
       <RightIcons />

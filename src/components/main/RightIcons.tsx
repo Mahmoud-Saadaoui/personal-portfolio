@@ -46,31 +46,31 @@ const RightIcons = () => {
       </div>
 
       {/* Switch Language */}
-      {open ? (
+      <div className="flex">
+      <div onClick={toggleOpen}>
+        <IoLanguage className="text-xl text-text_light dark:text-text_dark  cursor-pointer" />
+      </div>
+      {open && (
         <div
           onMouseEnter={() => setOpen(true)}
           onMouseLeave={() => setOpen(false)}
-          className="absolute top-2 -right-2 mb-4 w-10 text-dark dark:text-light transition-all duration-300 z-50"
+          className="absolute top-14 right-0 mb-4 w-10 bg-light_card dark:bg-dark_card text-dark dark:text-light rounded-lg transition-all duration-300 z-50"
         >
-          <div className="p-2 text-text_light dark:text-text_dark">
+          <div className="text-text_light dark:text-text_dark">
             <select
               id="language-select"
               defaultValue={localActive}
               onChange={onSelectChange}
               disabled={isPending}
-              className="mt-1 block w-full border border-text_light dark:border-text_dark rounded-sm focus:outline-none bg-light text-dark_text dark:bg-dark dark:text-dark_text"
+              className="block w-full border border-text_light dark:border-text_dark rounded-lg focus:outline-none bg-light text-dark dark:bg-dark dark:text-white"
             >
               <option value="en">En</option>
               <option value="fr">Fr</option>
               <option value="ar">ع</option>
             </select>
           </div>
-        </div>
-      ) : (
-        <div onClick={toggleOpen}>
-          <IoLanguage className="text-xl text-text_light dark:text-text_dark  cursor-pointer" />
-        </div>
-      )}
+        </div>)} 
+      </div>
     </div>
   );
 };

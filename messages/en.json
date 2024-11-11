@@ -24,7 +24,7 @@
     "Projects": {
         "title": "Side Fun Projects ...",
         "Developers_Tawassol_Intro": "This project is a social network application that allows users to interact with each other and share their personal and professional information.",
-        "Bookly_Intro": "Library Management System using MERN Technologies",
+        "Bookly_Intro": "A Library Management System built with MERN stack. Admins manage books via a dashboard, while users can rate books.",
         "Property_Pulse_Intro": "A property rental website built with Next.js 14, enabling users to browse, search, and manage property listings using the latest features."
     }
 }

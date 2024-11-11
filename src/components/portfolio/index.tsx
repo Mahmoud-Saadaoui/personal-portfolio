@@ -13,9 +13,9 @@ const PortfolioComponent = () => {
       </p>
       <div className="flex flex-col md:flex-row flex-wrap mb-2">
         {projects.map((el) => (
-          <div key={el.id} className="p-2 md:p-4 w-11/12 lg:w-5/12 bg-light_card dark:bg-dark_card m-2">
+          <div key={el.id} className="w-11/12 lg:w-5/12 bg-light_card dark:bg-dark_card m-2 p-2">
             <div className="flex justify-between items-center">
-              <p className="font-semibold text-md md:text-lg">{el.title}</p>
+              <p className="font-semibold text-md md:text-lg dark:text-white">{el.title}</p>
               <div className="text-xl text-dark dark:text-light">
                 <PiArrowSquareUpRightLight />
               </div>

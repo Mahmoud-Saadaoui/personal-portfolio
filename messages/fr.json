@@ -24,7 +24,7 @@
     "Projects": {
         "title": "Projets Ludiques ...",
         "Developers_Tawassol_Intro": "Ce projet est une application de réseau social qui permet aux utilisateurs d'interagir entre eux et de partager leurs informations personnelles et professionnelles.",
-        "Bookly_Intro": "Système de gestion de bibliothèque utilisant les technologies MERN",
+        "Bookly_Intro": "Un système de gestion de bibliothèque construit avec la pile MERN. Les administrateurs gèrent les livres via un tableau de bord, tandis que les utilisateurs peuvent évaluer les livres.",
         "Property_Pulse_Intro": "Un site de location de propriétés construit avec Next.js 14, permettant aux utilisateurs de parcourir, rechercher et gérer des annonces immobilières avec les dernières fonctionnalités."
       }
 }
