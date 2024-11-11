@@ -34,7 +34,7 @@ export default function Home() {
   };
   
   return (
-    <div className="w-screen h-screen bg-light dark:bg-dark overflow-hidden pb-20 px-10 pt-8 md:p-20">
+    <div className="w-screen h-screen bg-light dark:bg-dark overflow-hidden pb-16 px-10 pt-8 md:p-20">
       <Main/>
       <div className="h-full w-full border border-text_light dark:border-text_dark flex flex-col justify-center">
         <div className={`transition-container ${isAnimating ? "fade-out" : "fade-in"} overflow-y-auto`}>
