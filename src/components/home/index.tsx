@@ -1,10 +1,23 @@
+"use client"
+
 import React from 'react'
 import Image from "next/image"
 import profilePhoto from '../../../public/profile-photo.jpg'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 const HomeComponent = () => {
   const t = useTranslations("Home")
+  const locale = useLocale();
+
+    let CV;
+    if (locale === 'ar') {
+      CV = '/cv/cv-ar.pdf';
+    } else if (locale === 'fr') {
+      CV = '/cv/cv-fr.pdf';
+    } else {
+      CV = '/cv/cv-en.pdf';
+    }
+  
   return (
     <div className='mx-auto flex items-center justify-center'>
       <div className="px-2 md:px-4 flex flex-col items-start justify-center space-y-4 py-1">
@@ -28,8 +41,10 @@ const HomeComponent = () => {
           {t('about')}
         </p>
 
-        <button className="mb-4 px-5 py-2 bg-primary bg-buttons text-dark dark:text-white font-semibold rounded-lg">
-          {t('cv')}
+        <button 
+          className="mb-4 px-5 py-2 bg-primary bg-buttons text-dark dark:text-white font-semibold rounded-lg"
+        >
+          <a download="CV" href={CV}>{t('cv')}</a>
         </button>
       </div>
     </div>

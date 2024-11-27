@@ -1,11 +1,10 @@
 "use client";
-import React, { ChangeEvent, useContext, useState, useTransition } from "react";
+import React, { useContext, useState, useTransition } from "react";
 import { AppContext } from "@/context/AppContext";
 import { IoLanguage } from "react-icons/io5";
 import { MdWbSunny } from "react-icons/md";
 import { FaMoon } from "react-icons/fa";
 import { useRouter } from "next/navigation";
-import { useLocale } from "next-intl";
 
 const RightIcons = () => {
   const [isPending, startTransition] = useTransition();
@@ -16,24 +15,21 @@ const RightIcons = () => {
   const { darkMode, toggleMode } = context
   const [open, setOpen] = useState(false);
 
-  const toggleOpen = () => setOpen(!open);
-
   const toggleTheme = () => {
     toggleMode();
   };
 
   const router = useRouter();
-  const localActive = useLocale();
 
-  const onSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    const nextLocale = e.target.value;
-
+  const onSelectChange = (lang: string) => {
     startTransition(() => {
-      router.replace(`/${nextLocale}`);
+      router.replace(`/${lang}`);
+      setOpen(false);
     });
   };
+
   return (
-    <div className="flex flex-col items-center space-y-4 fixed top-8 md:top-20 right-3 md:right-9">
+    <div className="flex flex-col items-center space-y-5 fixed top-8 md:top-20 right-1 md:right-8">
       <div
         className="flex flex-col items-center cursor-pointer space-y-2"
         onClick={toggleTheme}
@@ -45,31 +41,42 @@ const RightIcons = () => {
         )}
       </div>
 
-      {/* Switch Language */}
-      <div className="flex">
-      <div onClick={toggleOpen}>
-        <IoLanguage className="text-xl text-text_light dark:text-text_dark  cursor-pointer" />
-      </div>
-      {open && (
-        <div
-          onMouseEnter={() => setOpen(true)}
-          onMouseLeave={() => setOpen(false)}
-          className="absolute top-14 right-0 mb-4 w-10 bg-light_card dark:bg-dark_card text-dark dark:text-light rounded-lg transition-all duration-300 z-50"
+      <div className="flex items-center justify-center">
+        <button 
+          onClick={() => setOpen(!open)}
+          className="py-2 px-1 relative group transition-all duration-200 focus:overflow-visible overflow-hidden flex flex-col items-center justify-center bg-white dark:bg-dark text-text_light dark:text-text_dark"
         >
-          <div className="text-text_light dark:text-text_dark">
-            <select
-              id="language-select"
-              defaultValue={localActive}
-              onChange={onSelectChange}
-              disabled={isPending}
-              className="block w-full border border-text_light dark:border-text_dark rounded-lg focus:outline-none bg-light text-dark dark:bg-dark dark:text-white"
+          <span className="text-xl border-white dark:border-dark rounded-[0 0 5px 5px]">
+            <IoLanguage />
+          </span>
+        </button>
+        
+        {open && (
+            <div 
+              onMouseEnter={() => setOpen(true)}
+              onMouseLeave={() => setOpen(false)}
+              className="absolute shadow-lg -bottom-32 left-0 w-full bg-white border border-zinc-200 rounded-lg flex flex-col items-center"
             >
-              <option value="en">En</option>
-              <option value="fr">Fr</option>
-              <option value="ar">ع</option>
-            </select>
-          </div>
-        </div>)} 
+              <span
+                className="flex flex-row gap-1 items-center hover:bg-zinc-100 p-2 rounded-lg cursor-pointer"
+                onClick={() => onSelectChange("en")}
+              >
+                En
+              </span>
+              <span
+                className="flex flex-row gap-1 items-center hover:bg-zinc-100 p-2 rounded-lg cursor-pointer"
+                onClick={() => onSelectChange("fr")}
+              >
+                Fr
+              </span>
+              <span
+                className="flex flex-row gap-1 items-center hover:bg-zinc-100 p-2 rounded-lg cursor-pointer"
+                onClick={() => onSelectChange("ar")}
+              >
+                ع
+              </span>
+            </div>
+          )}
       </div>
     </div>
   );
