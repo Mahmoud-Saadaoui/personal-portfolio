@@ -5,5 +5,6 @@ export interface ProjectsTypes {
         intro: string,
         technologies: string[],
     },
-    links: string
+    link: string,
+    demo: string
 }

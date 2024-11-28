@@ -8,35 +8,37 @@ const PortfolioComponent = () => {
   return (
     <div className='container mx-auto'>
       <div className="px-2 md:px-4 space-y-4 text-text_light dark:text-text_dark">
-      <p className='font-bold text-lg md:text-xl text-dark dark:text-white m-2'>
-        {t('title')}
-      </p>
-      <div className="flex flex-col md:flex-row flex-wrap mb-2">
-        {projects.map((el) => (
-          <div key={el.id} className="w-11/12 lg:w-5/12 bg-light_card dark:bg-dark_card m-2 p-2">
-            <div className="flex justify-between items-center">
-              <p className="font-semibold text-md md:text-lg dark:text-white">{el.title}</p>
-              <div className="text-xl text-dark dark:text-light">
-                <a href={`${el.links}`} target='_blanc'><PiArrowSquareUpRightLight /></a>
+        <p className='font-bold text-lg md:text-xl text-dark dark:text-white m-2'>
+          {t('title')}
+        </p>
+        <div className="flex flex-col md:flex-row flex-wrap mb-2">
+          {projects.map((el) => (
+            <div key={el.id} className="w-11/12 lg:w-5/12 bg-light_card dark:bg-dark_card m-2 p-2">
+              <div className="flex justify-between items-center">
+                <p className="font-semibold hover:text-blue-500 hover:cursor-pointer text-md md:text-lg dark:text-white dark:hover:text-blue-500">
+                  <a target='_blanc' href={el.link}>{el.title}</a>
+                </p>
+                <div className="text-xl text-dark dark:text-light hover:text-blue-500 dark:hover:text-blue-500">
+                  <a href={`${el.demo}`} target='_blanc'><PiArrowSquareUpRightLight /></a>
+                </div>
+              </div>
+              <p className="text-md md:text-lg">{t(el.description.intro)}</p>
+              <div className="flex flex-wrap items-center justify-start">
+                {el.description.technologies.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="text-muted text-sm border rounded-sm p-[2px] mt-1 mr-1"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
-            <p className="text-md md:text-lg">{t(el.description.intro)}</p>
-            <div className="flex flex-wrap items-center justify-start">
-              {el.description.technologies.map((tech, index) => (
-                <span
-                  key={index}
-                  className="text-muted text-sm border rounded-sm p-[2px] mt-1 mr-1"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
-    </div>
-    
+
   )
 }
 

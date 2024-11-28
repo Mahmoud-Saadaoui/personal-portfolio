@@ -6,18 +6,20 @@ export const projects: ProjectsTypes[] = [
         title: "Developers Tawassol",
         description: {
             intro: "Developers_Tawassol_Intro",
-            technologies: ["React", "Redux Toolkit", "Node", "Express", "MongoDB"]
+            technologies: ["React", "Redux Toolkit", "Tailwind", "Node", "Express", "MongoDB"]
         },
-        links: "https://github.com/Saadaoui-Forkan/dev_tawassol"
+        link: "https://github.com/Saadaoui-Forkan/dev_tawassol",
+        demo: "https://www.youtube.com/watch?v=DnMbkiuwMqY"
     },
     {
         id: 2,
         title: "Bookly",
         description: {
             intro: "Bookly_Intro",
-            technologies: ["React", "Redux Toolkit", "Tailwind", "Node", "Express", "MongoDB"]
+            technologies: ["React", "Redux Toolkit", "Node", "Express", "MongoDB"]
         },
-        links: "https://github.com/Saadaoui-Forkan/Bookly"
+        link: "https://github.com/Saadaoui-Forkan/Bookly",
+        demo: "https://www.youtube.com/watch?v=H9IEJoS_b64"
     },
     {
         id: 3,
@@ -26,6 +28,7 @@ export const projects: ProjectsTypes[] = [
             intro: "Property_Pulse_Intro",
             technologies: ["Next", "Tailwind", "MongoDB"]
         },
-        links: "https://github.com/Saadaoui-Forkan/ProrertyPulse" 
+        link: "https://github.com/Saadaoui-Forkan/ProrertyPulse",
+        demo: "https://prorerty-pulse.vercel.app"
     }
 ];

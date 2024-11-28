@@ -44,9 +44,9 @@ const RightIcons = () => {
       <div className="flex items-center justify-center">
         <button 
           onClick={() => setOpen(!open)}
-          className="py-2 px-1 relative group transition-all duration-200 focus:overflow-visible overflow-hidden flex flex-col items-center justify-center bg-white dark:bg-dark text-text_light dark:text-text_dark"
+          className="py-2 px-1 relative group transition-all duration-200 focus:overflow-visible overflow-hidden flex flex-col items-center justify-center dark:bg-dark text-text_light dark:text-text_dark"
         >
-          <span className="text-xl border-white dark:border-dark rounded-[0 0 5px 5px]">
+          <span className="text-xl border-white dark:border-dark">
             <IoLanguage />
           </span>
         </button>
@@ -55,22 +55,22 @@ const RightIcons = () => {
             <div 
               onMouseEnter={() => setOpen(true)}
               onMouseLeave={() => setOpen(false)}
-              className="absolute shadow-lg -bottom-32 left-0 w-full bg-white border border-zinc-200 rounded-lg flex flex-col items-center"
+              className="absolute shadow-lg -bottom-32 right-0 w-[50px] dark:text-light bg-[#A4A4A4] border border-zinc-200 dark:border-text_dark flex flex-col z-[100]"
             >
               <span
-                className="flex flex-row gap-1 items-center hover:bg-zinc-100 p-2 rounded-lg cursor-pointer"
+                className="flex flex-row gap-1 items-center justify-center hover:text-blue-500 hover:font-bold p-2 cursor-pointer w-full"
                 onClick={() => onSelectChange("en")}
               >
                 En
               </span>
               <span
-                className="flex flex-row gap-1 items-center hover:bg-zinc-100 p-2 rounded-lg cursor-pointer"
+                className="flex flex-row gap-1 items-center justify-center p-2 cursor-pointer w-full hover:text-blue-500 hover:font-bold"
                 onClick={() => onSelectChange("fr")}
               >
                 Fr
               </span>
               <span
-                className="flex flex-row gap-1 items-center hover:bg-zinc-100 p-2 rounded-lg cursor-pointer"
+                className="flex flex-row gap-1 items-center justify-center hover:text-blue-500 hover:font-bold p-2 cursor-pointer w-full"
                 onClick={() => onSelectChange("ar")}
               >
                 ع
