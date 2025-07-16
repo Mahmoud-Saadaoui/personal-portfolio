@@ -1,30 +1,35 @@
 {
-    "Home": {
-        "about": "Hello, I'm Mahmoud from Tunisia, a web developer specializing in React, Next, Node, TypeScript, and JavaScript. I love building websites with good UI/UX design, and I'm also passionate about new technologies.",
-        "fullname": "Saadaoui Mahmoud",
-        "role": "FullStack Developer",
-        "cv": "Download CV"
-    },
-    "Slider": {
-        "about": "About",
-        "work": "Work",
-        "portfolio": "Projects"
-    },
-    "Work": {
-        "I_Love_Working_On": "I Love Working On ...",
-        "React_js": "React.js",
-        "React_js_Paragraph": "My main framework is React.js and i can also use Redux Toolkit for state management.",
-        "Node_js": "Node.js",
-        "Node_Paragraph": "Skilled in backend development using the Express.js framework to create robust APIs.",
-        "Next_js": "Next.js with TypeScript",
-        "Next_js_paragraph": "I use Next.js as a full-stack framework with TypeScript, paired with MongoDB or PostgreSQL",
-        "Tailwind": "Tailwind",
-        "Tailwind_Paragraph": "I think it's the best tool for CSS to create responsive and accessible Design."
-    },
-    "Projects": {
-        "title": "Side Fun Projects ...",
-        "Developers_Tawassol_Intro": "This project is a social network application that allows users to interact with each other and share their personal and professional information.",
-        "Bookly_Intro": "A Library Management System built with MERN stack. Admins manage books via a dashboard, while users can rate books.",
-        "Property_Pulse_Intro": "A property rental website built with Next.js 14, enabling users to browse, search, and manage property listings using the latest features."
-    }
+  "Home": {
+    "about": "Hello, I'm Mahmoud from Tunisia, a web developer specializing in React, Next, Node, TypeScript, and JavaScript. I love building websites with good UI/UX design, and I'm also passionate about new technologies.",
+    "fullname": "Saadaoui Mahmoud",
+    "role": "Full Stack Developer",
+    "cv": "Download CV",
+    "welcome": "Welcome"
+  },
+  "Slider": {
+    "about": "About",
+    "work": "Work",
+    "portfolio": "Projects"
+  },
+  "Work": {
+    "I_Love_Working_On": "Technologies I rely on to bring web ideas to life",
+    "React_js": "React.js",
+    "React_js_Paragraph": "My main framework is React.js and i can also use Redux Toolkit for state management.",
+    "Node_js": "Node.js",
+    "Node_Paragraph": "Skilled in backend development using the Express.js framework to create robust APIs.",
+    "Next_js": "Next.js with TypeScript",
+    "Next_js_paragraph": "I use Next.js as a full-stack framework with TypeScript, paired with MongoDB or PostgreSQL",
+    "Tailwind": "Tailwind",
+    "Tailwind_Paragraph": "I think it's the best tool for CSS to create responsive and accessible Design."
+  },
+  "Projects": {
+    "title": "Explore my recent full-stack applications",
+    "chat_app_intro": "A full-stack real-time chat app with authentication, messages, read receipts, and email verification.",
+    "bookly_intro": "A MERN-based library system where admins manage books and users can rate and comment.",
+    "property_pulse_intro": "A modern real estate platform using Next.js 14 with search and property management features."
+  },
+  "LangSwitcher": {
+    "selectLanguage": "Select Language",
+    "cancel": "Cancel"
+  }
 }

@@ -14,15 +14,6 @@ module.exports = {
       xl: '1440px',
     },
     extend: {
-      colors: {
-        light: "#f8fafc",
-        dark: "#262626",
-        text_light: "#737373",
-        text_dark: "#A3A3A3",
-        buttons: "#67e8f9",
-        light_card: "#ffffff",
-        dark_card: "#1f1f1f"
-      },
     },
   },
   plugins: [],

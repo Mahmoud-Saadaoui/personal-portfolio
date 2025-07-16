@@ -8,3 +8,19 @@ export interface ProjectsTypes {
     link: string,
     demo: string
 }
+
+export interface SkillsType {
+    key: string,
+    descKey: string,
+}
+
+export type WorkCardProps = {
+    title: string;
+    description: string;
+};
+
+export type SectionKey = string;
+
+export interface MainContentProps {
+    active: SectionKey;
+}

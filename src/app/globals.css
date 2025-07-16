@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Mina:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
-.font-unlock {
-  font-family: "Exo 2", serif;
-  font-weight: bold;
+body {
+  font-family: "Cairo", sans-serif;
 }
 
 *,
@@ -33,31 +32,4 @@ body {
 ::-webkit-scrollbar-track {
   background-color: #e4e4e4;
   border-radius: 100px;
-}
-
-/* slide animation */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 0.3s forwards;
-}
-
-.fade-out {
-  opacity: 1;
-  transform: translateY(0);
-  animation: fadeOut 0.3s forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
 }
