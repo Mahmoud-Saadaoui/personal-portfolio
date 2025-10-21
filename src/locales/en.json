@@ -1,4 +1,16 @@
 {
-  "app.title": "Welcome to My App",
-  "app.description": "A multilingual app built with React, Vite, and Ant Design."
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "Who we are",
+    "description": "We are a dedicated team..."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "email": "Email",
+    "message": "Send Message"
+  }
 }

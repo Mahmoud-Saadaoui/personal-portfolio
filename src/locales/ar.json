@@ -1,4 +1,16 @@
 {
-  "app.title": "مرحبًا بك في تطبيقي",
-  "app.description": "تطبيق متعدد اللغات تم إنشاؤه باستخدام React و Vite و Ant Design"
+  "navbar": {
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "contact": "اتصل بنا"
+  },
+  "about": {
+    "title": "من نحن",
+    "description": "نحن فريق مكرّس ..."
+  },
+  "contact": {
+    "title": "اتصل بنا",
+    "email": "البريد الإلكتروني",
+    "message": "إرسال الرسالة"
+  }
 }

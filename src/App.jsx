@@ -1,41 +1,21 @@
-import React from "react";
-import { Typography, Select, Space } from "antd";
-import { FormattedMessage } from "react-intl";
-import { I18nProvider } from "./i18n";
+import React, { useEffect } from "react";
+import ChangeLanguage from "./components/ChangeLanguage";
+import { useTranslation } from "react-i18next";
+import Navbar from "./components/Navbar";
+import About from "./components/About";
 
-const { Title, Paragraph } = Typography;
-
-const AppContent = ({ locale, setLocale }) => {
+const App = () => {
+  const { i18n } = useTranslation()
+  useEffect(() => {
+    document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
+  }, [i18n.language]);
   return (
-    <div style={{ padding: 40, textAlign: locale === "ar" ? "right" : "left" }}>
-      <Space direction="vertical" style={{ width: "100%" }}>
-        <Select
-          value={locale}
-          style={{ width: 200 }}
-          onChange={setLocale}
-          options={[
-            { value: "en", label: "🇬🇧 English" },
-            { value: "fr", label: "🇫🇷 Français" },
-            { value: "ar", label: "🇸🇦 العربية" },
-          ]}
-        />
-
-        <Title>
-          <FormattedMessage id="app.title" />
-        </Title>
-
-        <Paragraph>
-          <FormattedMessage id="app.description" />
-        </Paragraph>
-      </Space>
-    </div>
-  );
+    <>
+      <ChangeLanguage/>
+      <Navbar/>
+      <About/>
+    </>
+  )
 };
-
-const App = () => (
-  <I18nProvider>
-    <AppContent />
-  </I18nProvider>
-);
 
 export default App;
