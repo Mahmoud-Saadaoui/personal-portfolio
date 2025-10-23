@@ -11,8 +11,6 @@ const App = () => {
   }, [i18n.language]);
   return (
     <>
-      <ChangeLanguage/>
-      <Navbar/>
       <About/>
     </>
   )

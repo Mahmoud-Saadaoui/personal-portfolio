@@ -1,9 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 body {
-    font-family: "Cairo", sans-serif;
-  }
+  font-family: "Cairo", sans-serif;
+}
+
+:root {
+  --color-primary-light: #14A800;
+  --color-primary-dark: #1DBF73;
+  --color-secondary-light: #108A00;
+  --color-secondary-dark: #22C55E;
+  --color-background-light: #FFFFFF;
+  --color-background-dark: #0D1117;
+  --color-foreground-light: #0D1117;
+  --color-foreground-dark: #E6E6E6;
+  --color-accent-light: #E3FCEC;
+  --color-accent-dark: #052E16;
+  --color-danger-light: #EF4444;
+  --color-danger-dark: #F87171;
+}
+
+[data-theme="dark"] {
+  --color-primary-light: #1DBF73;
+  --color-primary-dark: #14A800;
+  --color-secondary-light: #22C55E;
+  --color-secondary-dark: #108A00;
+  --color-background-light: #0D1117;
+  --color-background-dark: #FFFFFF;
+  --color-foreground-light: #E6E6E6;
+  --color-foreground-dark: #0D1117;
+  --color-accent-light: #052E16;
+  --color-accent-dark: #E3FCEC;
+  --color-danger-light: #F87171;
+  --color-danger-dark: #EF4444;
+}
