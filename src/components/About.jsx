@@ -7,7 +7,7 @@ const About = () => {
   return (
     <header
       id="about"
-      className="relative min-h-screen flex flex-col items-center justify-start"
+      className="relative min-h-screen flex flex-col items-center justify-start bg-[var(--color-accent-light)] dark:bg-[var(--color-accent-dark)]"
     >
       {/* Background Image, fixe à 80vh */}
       <div
@@ -18,15 +18,14 @@ const About = () => {
       {/* Card, légèrement décalée vers le bas */}
       <div
         className="
-          bg-[var(--color-primary-light)]/80 dark:bg-[var(--color-primary-dark)]/80
+          bg-[var(--color-surface-light)]/80 dark:bg-[var(--color-surface-dark)]/80 z-10
           text-white
           px-8 md:px-16 py-12
           text-center
           rounded-2xl
           shadow-lg
-          max-w-3xl
-          mx-4
-          -translate-y-9/12
+          max-w-3xl absolute
+          translate-y-2/12
           backdrop-blur-sm
         "
       >
@@ -76,7 +75,7 @@ const About = () => {
           مطور واجهة الأستخدام مقيم بالقاهرة، أعمل في التصميم والتطوير منذ خمس سنوات
         </h2>
 
-        <p className="text-sm md:text-base leading-[30px] text-[var(--color-accent-light)] dark:text-[var(--color-accent-dark)] mb-10">
+        <p className="text-sm md:text-base leading-[30px] text-[var(--color-foreground-light)] dark:text-[var(--color-foreground-dark)] mb-10">
           هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص
           أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعي.
         </p>

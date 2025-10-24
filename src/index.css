@@ -19,6 +19,7 @@ body {
   --color-accent-dark: #052E16;
   --color-danger-light: #EF4444;
   --color-danger-dark: #F87171;
+  --color-surface-light: #E3FCEC;
 }
 
 [data-theme="dark"] {
@@ -34,4 +35,5 @@ body {
   --color-accent-dark: #E3FCEC;
   --color-danger-light: #F87171;
   --color-danger-dark: #EF4444;
+  --color-surface-dark: #052E16;
 }
