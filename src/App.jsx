@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
-import ChangeLanguage from "./components/ChangeLanguage";
 import { useTranslation } from "react-i18next";
 import Header from "./components/Header";
 import About from "./components/About";
-import Licence from "./components/Licence";
-import Projects from "./components/Projcts";
-import Contacts from "./components/Contact";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 
 const App = () => {
   const { i18n } = useTranslation()
@@ -16,9 +14,8 @@ const App = () => {
     <>
       <Header/>
       <About/>
-      <Licence/>
+      <Skills/>
       <Projects/>
-      <Contacts/>
     </>
   )
 };

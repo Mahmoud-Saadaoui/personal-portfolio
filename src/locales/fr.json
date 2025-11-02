@@ -1,16 +1,92 @@
 {
   "navbar": {
-    "home": "Accueil",
-    "about": "À propos",
+    "about": "Intro",
+    "skills": "Competences",
+    "projects": "Projets ",
     "contact": "Contact"
   },
   "about": {
-    "title": "Qui sommes-nous ?",
-    "description": "Nous sommes une équipe dédiée..."
+    "name": "Saadaoui Mahmoud",
+    "title": "Développeur Web Full Stack | Développeur MERN | Passionné de DevOps",
+    "bio": "Bonjour ! Je suis Saadaoui Mahmoud, développeur Full Stack passionné, spécialisé dans la création d'applications web modernes, évolutives et sécurisées. Je maîtrise React.js, Next.js, Node.js ainsi que la gestion des bases de données avec MongoDB et PostgreSQL. J'applique également les bonnes pratiques DevOps, y compris CI/CD, Docker et déploiements automatisés, afin de fournir des applications performantes avec une expérience utilisateur fluide.",
+    "download": "Télécharger Mon CV"
   },
-  "contact": {
-    "title": "Contactez-nous",
-    "email": "E-mail",
-    "message": "Envoyer le message"
+  "skills": {
+    "skillsTitle": "Compétences Clés",
+    "react": {
+      "title": "React & Next.js",
+      "description": "Interfaces performantes avec SSR, API Routes et TypeScript. Code optimisé, SEO et UX fluide."
+    },
+    "state": {
+      "title": "Gestion d’état & UI/UX",
+      "description": "Gestion moderne avec Redux, Zustand, TanStack Query. UI responsive et élégante avec Tailwind & Ant Design."
+    },
+    "backend": {
+      "title": "Node.js & APIs",
+      "description": "API RESTful robustes avec Express/NestJS, auth JWT/OAuth2, backends modulaires et scalables."
+    },
+    "database": {
+      "title": "Bases de données",
+      "description": "Expertise MongoDB & PostgreSQL. Prisma ORM pour schémas efficaces, migrations et requêtes optimisées."
+    },
+    "devops": {
+      "title": "DevOps & Cloud",
+      "description": "Automatisation Docker/CI-CD, configuration VPS/Nginx, déploiements AWS sécurisés et scalables."
+    },
+    "design": {
+      "title": "Conception Systèmes",
+      "description": "Architectures scalables, caching, optimisation performance, DevSecOps pour fiabilité et rapidité."
+    }
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "filters": {
+      "all": "Tous",
+      "beginner": "Débutant",
+      "medium": "Intermédiaire",
+      "advanced": "Avancé"
+    },
+    "list": {
+      "bookmark": {
+        "title": "Bookmark",
+        "description": "Bookmark est une page d’atterrissage moderne et entièrement responsive créée avec HTML, JavaScript et Tailwind CSS. Inspiré du design du site Frontend Mentor, ce projet met l’accent sur la structure, la typographie et la mise en page fluide afin de maîtriser les bases de Tailwind CSS et du responsive design."
+      },
+      "fylo": {
+        "title": "Fylo",
+        "description": "Fylo est une page d’atterrissage élégante et responsive développée avec HTML, JavaScript et Tailwind CSS, intégrant cette fois un mode sombre et clair. Ce projet m’a permis d’approfondir la personnalisation avec Tailwind et la gestion dynamique des thèmes tout en conservant une interface moderne et équilibrée."
+      },
+      "loopstudio": {
+        "title": "Loopstudio",
+        "description": "Loopstudios est une page d’atterrissage responsive réalisée avec HTML, JavaScript et Tailwind CSS. Inspiré d’un défi Frontend Mentor, ce projet m’a permis de consolider ma maîtrise de la mise en page avec Tailwind CSS et d’expérimenter des structures flexibles et esthétiques."
+      },
+      "BlogApp": {
+        "title": "Blog Pro – Application Blog Fullstack",
+        "description": "Blog Pro est une application fullstack MERN (MongoDB, Express, React, Node.js) développée à des fins éducatives et pour enrichir le portfolio. Elle permet aux utilisateurs de créer, modifier et gérer des articles de blog avec téléversement d’images via Cloudinary, authentification sécurisée JWT, et gestion complète des utilisateurs. Le backend est propulsé par Node.js et Express connecté à MongoDB Atlas, tandis que le frontend est conçu avec React pour une interface moderne et responsive."
+      },
+      "facebookClone": {
+        "title": "Facebook Clone",
+        "description": "Projet frontend moderne en React.js, démontrant mes compétences en interfaces dynamiques et design épuré."
+      },
+      "libreMap": {
+        "title": "LibreMap",
+        "description": "Application de cartographie dynamique développée avec React.js et Maplibre.js, affichant les capitales du monde avec des popups interactifs et un design personnalisable."
+      },
+      "booklyFront": {
+        "title": "Book Store",
+        "description": "Application Book Store développée avec React.js, utilisant le Context API pour la gestion d’état et React Toastify pour les notifications. Les utilisateurs peuvent ajouter des livres au panier, modifier la quantité et voir le prix total en temps réel."
+      },
+      "bookly": {
+        "title": "Bookly | MERN App",
+        "description": "Bookly est une application web complète de gestion de bibliothèque développée avec la stack MERN. Elle permet à l’administrateur de gérer les livres (ajout, modification, suppression), et aux utilisateurs de noter, commenter et ajouter leurs favoris. Le projet met en avant mes compétences en développement full stack, sécurisation par JWT, intégration API, Cloudinary, et Redux Toolkit pour la gestion d’état."
+      },
+      "pshop": {
+        "title": "PShop",
+        "description": "PShop est une plateforme eCommerce complète développée avec la stack MERN et Redux Toolkit. Elle permet aux utilisateurs de parcourir les produits, gérer leur panier, laisser des avis, et finaliser leurs achats avec paiement PayPal ou carte bancaire. Les administrateurs peuvent gérer les produits, commandes et utilisateurs via un dashboard moderne. Les images produits sont hébergées sur Cloudinary pour plus de rapidité et de sécurité."
+      },
+      "chat": {
+        "title": "Chat App",
+        "description": "Realtime Chat App est une application de messagerie moderne et complète développée en TypeScript avec la stack MERN. Elle propose une authentification sécurisée (JWT), la vérification par email, la messagerie en temps réel (Socket.IO), la gestion de profil avec Cloudinary, et une expérience PWA fluide, installable sur tout appareil."
+      }
+    }
   }
 }

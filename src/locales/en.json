@@ -1,16 +1,92 @@
 {
   "navbar": {
-    "home": "Home",
-    "about": "About",
+    "about": "Intro",
+    "skills": "Skills",
+    "projects": "Projects",
     "contact": "Contact"
   },
   "about": {
-    "title": "Who we are",
-    "description": "We are a dedicated team..."
+    "name": "Saadaoui Mahmoud",
+    "title": "Full Stack Web Developer | MERN Stack Developer | DevOps Enthusiast",
+    "bio": "Hello! I'm Saadaoui Mahmoud, a passionate Full Stack Web Developer focused on creating modern, scalable, and secure web applications. I specialize in React.js, Next.js, Node.js, and database management with MongoDB and PostgreSQL. I also implement DevOps best practices including CI/CD, Docker, and automated deployments to deliver high-performance applications with seamless user experiences.",
+    "download": "Download Resume"
   },
-  "contact": {
-    "title": "Contact Us",
-    "email": "Email",
-    "message": "Send Message"
+  "skills": {
+    "skillsTitle": "Core Expertise",
+    "react": {
+      "title": "React & Next.js",
+      "description": "High-performance interfaces with SSR, API Routes, and TypeScript. Optimized code, SEO, and UX for seamless experiences."
+    },
+    "state": {
+      "title": "State & UI/UX",
+      "description": "Modern state management with Redux, Zustand, TanStack Query. Responsive, elegant UIs with Tailwind & Ant Design."
+    },
+    "backend": {
+      "title": "Node.js & APIs",
+      "description": "Robust RESTful APIs with Express/NestJS, JWT/OAuth2 auth, modular, scalable backends."
+    },
+    "database": {
+      "title": "Databases",
+      "description": "MongoDB & PostgreSQL expertise. Prisma ORM for efficient schema, migrations, and optimized queries."
+    },
+    "devops": {
+      "title": "DevOps & Cloud",
+      "description": "Docker & CI/CD automation, VPS/Nginx configuration, AWS deployments with security and scalability."
+    },
+    "design": {
+      "title": "System Design",
+      "description": "Scalable architectures, caching, performance optimization, DevSecOps for reliability and speed."
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "filters": {
+      "all": "All",
+      "beginner": "Beginner",
+      "medium": "Medium",
+      "advanced": "Advanced"
+    },
+    "list": {
+      "bookmark": {
+        "title": "Bookmark",
+        "description": "Bookmark is a modern, fully responsive landing page built with HTML, JavaScript, and Tailwind CSS. Inspired by Frontend Mentor designs, this project focuses on layout, typography, and responsiveness to strengthen my Tailwind CSS and front-end design skills."
+      },
+      "fylo": {
+        "title": "Fylo",
+        "description": "Fylo is a sleek and responsive landing page built with HTML, JavaScript, and Tailwind CSS, featuring a dark/light mode toggle. This project helped me explore Tailwind customization and theme management while maintaining a clean, modern interface."
+      },
+      "loopstudio": {
+        "title": "Loopstudio",
+        "description": "Loopstudios is a responsive landing page built with HTML, JavaScript, and Tailwind CSS. Inspired by a Frontend Mentor challenge, this project strengthened my understanding of Tailwind layout design and responsive interface building."
+      },
+      "BlogApp": {
+        "title": "Blog Pro – Fullstack Blog Application",
+        "description": "Blog Pro is a complete fullstack MERN (MongoDB, Express, React, Node.js) blog application built for educational and portfolio purposes.It allows users to create, edit, and manage blog posts with image uploads via Cloudinary, JWT-based authentication, and secure user management.The backend is powered by Node.js and Express, connected to MongoDB Atlas, while the frontend is built with React for a modern and responsive interface."
+      },
+      "facebookClone": {
+        "title": "Facebook Clone",
+        "description": "Modern React.js frontend project showcasing my skills in dynamic interfaces and clean design."
+      },
+      "libreMap": {
+        "title": "LibreMap",
+        "description": "A dynamic mapping app built with React.js and Maplibre.js, displaying world capitals with interactive popups and customizable map styles."
+      },
+      "booklyFront": {
+        "title": "Book Store",
+        "description": "Book Store app built with React.js, using the Context API for state management and React Toastify for notifications. Users can add books to the cart, update quantities, and view the total price in real time."
+      },
+      "bookly": {
+        "title": "Bookly | MERN App",
+        "description": "Bookly is a full-featured Library Management System built with the MERN stack. Admins can manage books (add, edit, delete), while users can rate, comment, and add favorites. This project showcases my skills in full-stack development, JWT authentication, API integration, Cloudinary image handling, and state management with Redux Toolki"
+      },
+      "pshop": {
+        "title": "PShop",
+        "description": "PShop is a full-featured eCommerce platform built with the MERN stack and Redux Toolkit. Users can browse products, manage carts, leave reviews, and complete purchases using PayPal or credit card payments. Admins can efficiently manage products, orders, and users through a modern dashboard. Product images are hosted on Cloudinary for fast and secure storage."
+      },
+      "chat": {
+        "title": "Chat App",
+        "description": "Realtime Chat App is a modern, full-featured messaging platform built with TypeScript and the MERN stack. It includes secure authentication (JWT), email verification, real-time chat (Socket.IO), profile management via Cloudinary, and a smooth PWA experience installable on any device."
+      }
+    }
   }
 }
