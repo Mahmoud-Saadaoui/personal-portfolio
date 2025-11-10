@@ -1,6 +1,6 @@
 import { FaDownload } from "react-icons/fa";
 import profile from "../assets/profile.png";
-import bg from "../assets/bg.jpg";
+// import bg from "../assets/bg.jpg";
 import { useTranslation } from "react-i18next";
 import { socials } from "../data/data.about";
 import cv_fr from "../assets/files/cv-fr.pdf";
@@ -19,22 +19,13 @@ const Home = () => {
   return (
     <section
       id="about"
-      className="relative flex flex-col items-center justify-center 
-             bg-(--color-accent-light) dark:bg-(--color-accent-dark)
-             transition-colors duration-500"
+      className="relative flex flex-col items-center justify-center  mp-6"
     >
-      {/* Background Image */}
-      <div
-        className="w-full h-[80vh] bg-center bg-cover brightness-90 dark:brightness-75"
-        style={{ backgroundImage: `url(${bg})` }}
-      ></div>
 
       {/* Card principale */}
       <div
         className="
       -mt-24
-      bg-(--color-surface-light)/95 dark:bg-(--color-surface-dark)/90
-      text-(--color-foreground-light) dark:text-(--color-foreground-dark)
       px-8 md:px-16 py-12
       text-center
       rounded-2xl

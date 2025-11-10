@@ -13,11 +13,11 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Détection du scroll
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > window.innerHeight / 2);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => setIsScrolled(window.scrollY > window.innerHeight / 2);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   // Gestion du thème
   useEffect(() => {
@@ -26,12 +26,6 @@ const Navbar = () => {
   }, [theme]);
 
   const toggleTheme = () => setTheme((prev) => (prev === "light" ? "dark" : "light"));
-
-  // const navLinks = [
-  //   { id: "/", label: t("navbar.about") },
-  //   { id: "/skills", label: t("navbar.skills") },
-  //   { id: "/projects", label: t("navbar.projects") },
-  // ];
 
   return (
     <motion.header
