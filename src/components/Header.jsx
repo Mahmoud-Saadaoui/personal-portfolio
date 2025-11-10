@@ -3,6 +3,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FaSun, FaMoon, FaBars, FaTimes } from "react-icons/fa";
 import ChangeLanguage from "./ChangeLanguage";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { navLinks } from "../data/data.navLinks";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -25,11 +27,11 @@ const Navbar = () => {
 
   const toggleTheme = () => setTheme((prev) => (prev === "light" ? "dark" : "light"));
 
-  const navLinks = [
-    { id: "about", label: t("navbar.about") },
-    { id: "skills", label: t("navbar.skills") },
-    { id: "projects", label: t("navbar.projects") },
-  ];
+  // const navLinks = [
+  //   { id: "/", label: t("navbar.about") },
+  //   { id: "/skills", label: t("navbar.skills") },
+  //   { id: "/projects", label: t("navbar.projects") },
+  // ];
 
   return (
     <motion.header
@@ -49,7 +51,7 @@ const Navbar = () => {
               key={link.id}
               className="hover:text-(--color-secondary-dark) dark:hover:text-(--color-secondary-light) cursor-pointer transition-colors"
             >
-              <a href={`#${link.id}`}>{link.label}</a>
+              <Link to={link.id}>{t(link.label)}</Link>
             </li>
           ))}
         </ul>

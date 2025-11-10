@@ -1,7 +1,11 @@
+import { useTranslation } from "react-i18next";
 import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { navLinks } from "../data/data.navLinks";
 
 const Footer = () => {
   const year = new Date().getFullYear();
+  const { t } = useTranslation();
 
   return (
     <footer
@@ -14,15 +18,15 @@ const Footer = () => {
         
         {/* 🔗 Liens simples */}
         <nav className="flex flex-wrap justify-center gap-6 text-sm font-medium">
-          {["about", "skills", "projects"].map((item) => (
-            <a
-              key={item}
-              href={`#${item}`}
+          {navLinks.map((item) => (
+            <Link
+              key={item.id}
+              to={item.id}
               className="cursor-pointer hover:text-(--color-primary-light) dark:hover:text-(--color-primary-dark)
                          transition-colors duration-300"
             >
-              {item}
-            </a>
+              {t(item.label)}
+            </Link>
           ))}
         </nav>
 

@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Header from "./components/Header";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
 import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import ProjectsPage from "./pages/ProjectsPage";
+import SkillsPage from "./pages/SkillsPage";
+import { Route, Routes } from "react-router-dom";
 
 const App = () => {
   const { i18n } = useTranslation()
@@ -14,9 +15,11 @@ const App = () => {
   return (
     <>
       <Header/>
-      <About/>
-      <Skills/>
-      <Projects/>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/skills" element={<SkillsPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+      </Routes>
       <Footer/>
     </>
   )

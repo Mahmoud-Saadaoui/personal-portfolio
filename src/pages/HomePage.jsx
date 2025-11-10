@@ -7,7 +7,7 @@ import cv_fr from "../assets/files/cv-fr.pdf";
 import cv_ar from "../assets/files/cv-ar.pdf";
 import cv_en from "../assets/files/cv-en.pdf";
 
-const About = () => {
+const Home = () => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   let cv;
@@ -115,4 +115,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Home;
