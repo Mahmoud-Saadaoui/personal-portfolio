@@ -1,4 +1,3 @@
-import React from "react";
 import { FaDownload } from "react-icons/fa";
 import profile from "../assets/profile.png";
 import bg from "../assets/bg.jpg";
@@ -89,7 +88,7 @@ const About = () => {
         </ul>
 
         {/* Bio */}
-        <p className="text-base md:text-lg leading-[32px] text-(--color-foreground-light)/90 dark:text-(--color-foreground-dark)/90 mb-10">
+        <p className="text-base md:text-lg leading-8 text-(--color-foreground-light)/90 dark:text-(--color-foreground-dark)/90 mb-10">
           {t("about.bio")}
         </p>
 

@@ -2,11 +2,15 @@
 
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Cairo", sans-serif;
 }
 
-:root {
+/* :root {
   --color-primary-light: #14A800;
   --color-primary-dark: #1DBF73;
   --color-secondary-light: #108A00;
@@ -36,6 +40,59 @@ body {
   --color-danger-light: #F87171;
   --color-danger-dark: #EF4444;
   --color-surface-dark: #052E16;
+} */
+
+:root {
+  /* Couleurs principales (ton moderne bleu-vert/gris neutre) */
+  --color-primary-light: #2A9D8F;  /* teal doux, élégant */
+  --color-primary-dark: #21867A;   /* plus profond pour dark mode */
+  
+  /* Couleurs secondaires (accent cuivre/doré pour contraste) */
+  --color-secondary-light: #E9C46A; /* doré clair */
+  --color-secondary-dark: #D4A418;  /* doré plus chaud */
+  
+  /* Arrière-plans */
+  --color-background-light: #FAFAFA; /* blanc cassé */
+  --color-background-dark: #0D1117;  /* gris-noir profond */
+  
+  /* Texte et éléments de premier plan */
+  --color-foreground-light: #1E1E1E; /* texte principal clair */
+  --color-foreground-dark: #EAEAEA;  /* texte clair sur fond sombre */
+  
+  /* Couleurs d'accent (fond des sections About/Skills) */
+  --color-accent-light: #E6F4F1; /* léger vert-gris pastel */
+  --color-accent-dark: #0E2E28;  /* vert profond, relaxant */
+  
+  /* Couleurs de danger */
+  --color-danger-light: #E63946;
+  --color-danger-dark: #F87171;
+
+  /* Surface des cartes */
+  --color-surface-light: #FFFFFF;
+  --color-surface-dark: #1C1C1E;
+}
+
+[data-theme="dark"] {
+  --color-primary-light: #20BBA7;
+  --color-primary-dark: #2A9D8F;
+  
+  --color-secondary-light: #FFD166;
+  --color-secondary-dark: #E9C46A;
+  
+  --color-background-light: #0D1117;
+  --color-background-dark: #FAFAFA;
+  
+  --color-foreground-light: #EAEAEA;
+  --color-foreground-dark: #1E1E1E;
+  
+  --color-accent-light: #0E2E28;
+  --color-accent-dark: #E6F4F1;
+  
+  --color-danger-light: #F87171;
+  --color-danger-dark: #E63946;
+  
+  --color-surface-light: #1C1C1E;
+  --color-surface-dark: #FFFFFF;
 }
 
 .project-overlay {

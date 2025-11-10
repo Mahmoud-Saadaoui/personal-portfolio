@@ -15,7 +15,7 @@ const Projects = () => {
       : projects.filter((p) => p.type === activeFilter);
   return (
     <section
-      id="gallery"
+      id="projects"
       className="py-10 bg-(--color-background-light) dark:bg-(--color-background-dark) text-right"
     >
       {/* === Section Title === */}
