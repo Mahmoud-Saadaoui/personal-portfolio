@@ -6,8 +6,6 @@ import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import SkillsPage from "./pages/SkillsPage";
 import { Route, Routes } from "react-router-dom";
-import darkBg from "./assets/dark-bg.png";
-import lightBg from "./assets/light-bg.png";
 
 const App = () => {
   const { i18n } = useTranslation()
@@ -15,13 +13,8 @@ const App = () => {
     document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
   }, [i18n.language]);
 
-  const theme = localStorage.getItem("theme") || "light";
-  let bgImage;
-  theme === "light" ? (bgImage = lightBg) : (bgImage = darkBg);
-  console.log(bgImage);
-
   return (
-      <div className={`min-h-screen bg-cover bg-center`} style={{ backgroundImage: `url(${bgImage})` }}>
+      <div className={`min-h-screen bg-cover bg-center`} style={{ backgroundImage: "var(--app-bg)" }}>
       <Header/>
       <main className="main">
       <Routes>

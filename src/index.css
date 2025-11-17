@@ -2,98 +2,35 @@
 
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: "Cairo", sans-serif;
 }
 
-:root {
-  /* Couleurs principales (ton moderne bleu-vert/gris neutre) */
-  --color-primary-light: #2A9D8F;  /* teal doux, élégant */
-  --color-primary-dark: #21867A;   /* plus profond pour dark mode */
-  
-  /* Couleurs secondaires (accent cuivre/doré pour contraste) */
-  --color-secondary-light: #E9C46A; /* doré clair */
-  --color-secondary-dark: #D4A418;  /* doré plus chaud */
-  
-  /* Arrière-plans */
-  --color-background-light: #FAFAFA; /* blanc cassé */
-  --color-background-dark: #0D1117;  /* gris-noir profond */
-  
-  /* Texte et éléments de premier plan */
-  --color-foreground-light: #1E1E1E; /* texte principal clair */
-  --color-foreground-dark: #EAEAEA;  /* texte clair sur fond sombre */
-  
-  /* Couleurs d'accent (fond des sections About/Skills) */
-  --color-accent-light: #E6F4F1; /* léger vert-gris pastel */
-  --color-accent-dark: #0E2E28;  /* vert profond, relaxant */
-  
-  /* Couleurs de danger */
-  --color-danger-light: #E63946;
-  --color-danger-dark: #F87171;
-
-  /* Surface des cartes */
-  --color-surface-light: #FFFFFF;
-  --color-surface-dark: #1C1C1E;
+/* :root {
+  --app-bg: url("/src/assets/light-bg.png");
 }
 
 [data-theme="dark"] {
-  --color-primary-light: #20BBA7;
-  --color-primary-dark: #2A9D8F;
-  
-  --color-secondary-light: #FFD166;
-  --color-secondary-dark: #E9C46A;
-  
-  --color-background-light: #0D1117;
-  --color-background-dark: #FAFAFA;
-  
-  --color-foreground-light: #EAEAEA;
-  --color-foreground-dark: #1E1E1E;
-  
-  --color-accent-light: #0E2E28;
-  --color-accent-dark: #E6F4F1;
-  
-  --color-danger-light: #F87171;
-  --color-danger-dark: #E63946;
-  
-  --color-surface-light: #1C1C1E;
-  --color-surface-dark: #FFFFFF;
-}
+  --app-bg: url("/src/assets/dark-bg.png");
+} */
 
 .main {
   min-height: calc(100vh-4rem); 
   overflow-x: auto;
 }
 
-.project-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: var(--color-primary-light);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; 
-  align-items: center;
-  text-align: center;
-  padding: 1rem;
-  opacity: 0;
-  transition: opacity 0.5s;
-  overflow-y: auto;
-  overscroll-behavior: contain;
+/* ==== Change Language Animation ==== */
+@keyframes dropdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
 }
 
-.project-overlay::-webkit-scrollbar {
-  width: 3px;
-}
-
-.project-overlay::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 2px;
-}
-
-.project-card:hover .project-overlay {
-  opacity: 1;
+.animate-dropdown {
+  animation: dropdown 0.18s ease-out forwards;
 }

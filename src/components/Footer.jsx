@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { navLinks } from "../data/data.navLinks";
+import { navLinks } from "../data/data.navbar";
 
 const Footer = () => {
   const year = new Date().getFullYear();
