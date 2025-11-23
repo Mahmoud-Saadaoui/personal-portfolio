@@ -1,18 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
 
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 body {
   font-family: "Cairo", sans-serif;
 }
-
-/* :root {
-  --app-bg: url("/src/assets/light-bg.png");
-}
-
-[data-theme="dark"] {
-  --app-bg: url("/src/assets/dark-bg.png");
-} */
 
 .main {
   min-height: calc(100vh-4rem); 

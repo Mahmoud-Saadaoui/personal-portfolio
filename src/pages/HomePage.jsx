@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <section
       id="about"
-      className="relative flex flex-col items-center justify-center  mp-6"
+      className="relative flex flex-col items-center justify-center"
     >
 
       {/* Card principale */}

@@ -1,17 +1,14 @@
-import { useEffect, useState } from "react";
-import { FaSun, FaMoon, FaBars, FaTimes } from "react-icons/fa";
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 import ChangeLanguage from "./ChangeLanguage";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { navLinks } from "../data/data.navbar";
+import { Theme } from "./Theme";
 
 const Header = () => {
   const { t } = useTranslation();
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleTheme = () =>
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
 
   return (
     <header
@@ -40,21 +37,7 @@ const Header = () => {
         {/* Actions */}
         <div className="flex items-center gap-3">
           <ChangeLanguage />
-
-          {/* Toggle theme */}
-          <button
-            onClick={toggleTheme}
-            aria-label="Toggle theme"
-            className="flex items-center justify-center w-10 h-10 rounded-full 
-                       border border-gray-300 dark:border-gray-700
-                       bg-white/70 dark:bg-gray-900/70
-                       text-gray-800 dark:text-gray-200
-                       hover:bg-gray-200/50 dark:hover:bg-gray-700/50
-                       transition-all duration-200"
-          >
-            {theme === "light" ? <FaMoon size={18} /> : <FaSun size={18} />}
-          </button>
-
+          <Theme/>
           {/* Burger Button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}

@@ -14,7 +14,7 @@ const App = () => {
   }, [i18n.language]);
 
   return (
-      <div className={`min-h-screen bg-cover bg-center`} style={{ backgroundImage: "var(--app-bg)" }}>
+      <div className="min-h-screen bg-zinc-100 dark:bg-zinc-600 ">
       <Header/>
       <main className="main">
       <Routes>
