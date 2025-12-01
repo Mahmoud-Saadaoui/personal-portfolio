@@ -1,15 +1,12 @@
 import { useState } from "react";
-import { FaThLarge, FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaThLarge, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { filtersData, projects } from "../data/data.projects";
 
-const PROJECTS_PER_PAGE = 4;
-
 const Projects = () => {
   const { t, i18n } = useTranslation();
   const [activeFilter, setActiveFilter] = useState("all");
-  const [currentPage, setCurrentPage] = useState(1);
   const isRTL = i18n.language === "ar";
 
   const filters = filtersData.map(f => ({ ...f, label: t(f.key) }));
@@ -18,21 +15,8 @@ const Projects = () => {
     ? projects
     : projects.filter((p) => p.language === activeFilter);
 
-  // Pagination calculations
-  const totalPages = Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE);
-  const startIndex = (currentPage - 1) * PROJECTS_PER_PAGE;
-  const endIndex = startIndex + PROJECTS_PER_PAGE;
-  const currentProjects = filteredProjects.slice(startIndex, endIndex);
-
-  // Reset to page 1 when filter changes
   const handleFilterChange = (filterId) => {
     setActiveFilter(filterId);
-    setCurrentPage(1);
-  };
-
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const containerVariants = {
@@ -56,7 +40,7 @@ const Projects = () => {
 
   return (
     <section
-      className={`py-20 px-4 sm:px-6 lg:px-8 bg-[var(--color-background)] ${isRTL ? "text-right" : "text-left"
+      className={`py-4 px-4 sm:px-6 lg:px-8 bg-[var(--color-background)] ${isRTL ? "text-right" : "text-left"
         }`}
     >
       <div className="max-w-7xl mx-auto">
@@ -99,11 +83,14 @@ const Projects = () => {
           animate="visible"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12"
         >
-          <AnimatePresence mode="wait">
-            {currentProjects.map((project) => (
+          <AnimatePresence>
+            {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}
                 variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
                 layout
                 className="group relative bg-[var(--color-surface)] rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-[var(--color-text-muted)]/10 hover:-translate-y-2 hover:border-[var(--color-primary)]/30"
               >
@@ -171,46 +158,6 @@ const Projects = () => {
             ))}
           </AnimatePresence>
         </motion.div>
-
-        {/* Pagination */}
-        {totalPages > 1 && (
-          <div className="flex items-center justify-center gap-2">
-            <button
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage === 1}
-              className={`p-2 rounded-lg transition-all ${currentPage === 1
-                ? "text-[var(--color-text-muted)]/50 cursor-not-allowed"
-                : "text-[var(--color-text-main)] hover:bg-[var(--color-surface)] hover:text-[var(--color-primary)]"
-                }`}
-            >
-              <FaChevronLeft />
-            </button>
-
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-              <button
-                key={page}
-                onClick={() => handlePageChange(page)}
-                className={`w-10 h-10 rounded-lg font-medium transition-all ${currentPage === page
-                  ? "bg-[var(--color-primary)] text-white shadow-lg"
-                  : "bg-[var(--color-surface)] text-[var(--color-text-main)] hover:bg-[var(--color-primary)]/10 hover:text-[var(--color-primary)]"
-                  }`}
-              >
-                {page}
-              </button>
-            ))}
-
-            <button
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === totalPages}
-              className={`p-2 rounded-lg transition-all ${currentPage === totalPages
-                ? "text-[var(--color-text-muted)]/50 cursor-not-allowed"
-                : "text-[var(--color-text-main)] hover:bg-[var(--color-surface)] hover:text-[var(--color-primary)]"
-                }`}
-            >
-              <FaChevronRight />
-            </button>
-          </div>
-        )}
       </div>
     </section>
   );
