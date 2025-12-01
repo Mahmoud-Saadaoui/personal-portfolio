@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import profile from "../assets/profile.png";
 import { socials } from "../data/data.about";
 import { useNavigate } from "react-router-dom";
-import { containerVariants, itemVariants } from "../variants";
+import { containerVariants, itemVariants } from "../utils/variants";
 
 const Home = () => {
   const navigate = useNavigate();

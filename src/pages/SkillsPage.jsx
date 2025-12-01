@@ -9,8 +9,8 @@ import {
   FaGraduationCap
 } from "react-icons/fa";
 import { skillsKeys } from "../data/data.skills";
-import Heading from "../components/Heading";
-import { containerVariants, itemVariants } from "../variants";
+import Heading from "../components/common/Heading";
+import { containerVariants, itemVariants } from "../utils/variants";
 
 const iconMap = {
   "skills.frontend": <FaCode />,

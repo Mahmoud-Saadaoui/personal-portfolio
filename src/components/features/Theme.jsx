@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { FaSun, FaMoon, FaDesktop } from "react-icons/fa";
-import useTheme from "../hooks/useTheme";
+import useTheme from "../../hooks/useTheme";
 import { useTranslation } from "react-i18next";
 
 export const Theme = () => {

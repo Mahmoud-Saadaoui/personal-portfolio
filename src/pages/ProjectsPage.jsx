@@ -3,8 +3,8 @@ import { FaThLarge, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { filtersData, projects } from "../data/data.projects";
-import Heading from "../components/Heading";
-import { containerVariants, itemVariants } from "../variants";
+import Heading from "../components/common/Heading";
+import { containerVariants, itemVariants } from "../utils/variants";
 
 const Projects = () => {
   const { t, i18n } = useTranslation();

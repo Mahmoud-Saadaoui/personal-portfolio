@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { FiGlobe } from "react-icons/fi";
-import { LANGUAGES } from "../data/data.navbar";
+import { LANGUAGES } from "../../data/data.navbar";
 
 const Language = () => {
   const { i18n } = useTranslation();
