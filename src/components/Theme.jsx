@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FaSun, FaMoon, FaDesktop } from "react-icons/fa";
-import useTheme from "../hooks/useTheme"; // adapte le chemin
+import useTheme from "../hooks/useTheme";
+import { useTranslation } from "react-i18next";
 
 export const Theme = () => {
   const { theme, setTheme } = useTheme();
+  const { i18n } = useTranslation();
   const [open, setOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const btnRef = useRef(null);
+
+  const isRTL = i18n.language === "ar";
 
   const themes = {
     light: { label: "Light", icon: <FaSun size={16} /> },
@@ -12,27 +18,37 @@ export const Theme = () => {
     system: { label: "System", icon: <FaDesktop size={16} /> },
   };
 
-  // Icône affichée sur le bouton principal
   const currentIcon = themes[theme]?.icon;
 
-  // Changer le thème
-  const handleSelect = (value) => {
-    setTheme(value);  // applique le thème
-    setOpen(false);   // ferme le menu
-  };
+  // === AUTO-CLOSE when clicking outside ===
+  useEffect(() => {
+    const close = (e) => {
+      if (
+        open &&
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target) &&
+        !btnRef.current.contains(e.target)
+      ) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("click", close);
+    return () => document.removeEventListener("click", close);
+  }, [open]);
 
   return (
-    <div className="relative inline-block text-left">
-      {/* Bouton principal */}
+    <div className="relative inline-block text-left select-none">
+
+      {/* Button */}
       <button
+        ref={btnRef}
         onClick={() => setOpen(!open)}
         aria-label="Select theme"
-        className="flex items-center justify-center w-10 h-10 rounded-full 
-          border border-gray-300 dark:border-gray-700
-          bg-white/70 dark:bg-gray-900/70
-          text-gray-800 dark:text-gray-200
-          hover:bg-gray-200/50 dark:hover:bg-gray-700/50
-          transition-all duration-200"
+        className="
+          flex items-center justify-center w-10 h-10
+          text-(--color-text-main)
+          transition-all duration-200 shadow-sm
+        "
       >
         {currentIcon}
       </button>
@@ -40,20 +56,31 @@ export const Theme = () => {
       {/* Dropdown */}
       {open && (
         <div
-          className="absolute right-0 mt-2 w-36 rounded-lg shadow-lg
-            bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700
-            py-2 z-50"
+          ref={dropdownRef}
+          className={`
+            absolute mt-2 w-36 rounded-xl shadow-lg
+            bg-(--color-surface) border border-(--color-text-muted)/30
+            animate-fade-slide z-50
+            ${isRTL ? "left-0" : "right-0"}
+          `}
         >
           {Object.entries(themes).map(([key, { label, icon }]) => (
             <button
               key={key}
-              onClick={() => handleSelect(key)}
-              className={`w-full flex items-center gap-2 px-3 py-2 text-left
-                text-gray-800 dark:text-gray-200
-                hover:bg-gray-100 dark:hover:bg-gray-700
-                transition ${
-                  theme === key ? "font-semibold text-blue-600 dark:text-blue-400" : ""
-                }`}
+              onClick={() => {
+                setTheme(key);
+                setOpen(false);
+              }}
+              className={`
+                w-full flex items-center gap-2 px-4 py-2
+                text-(--color-text-main)
+                hover:bg-(--color-background)
+                transition-all
+                ${theme === key
+                  ? "font-semibold text-(--color-primary)"
+                  : ""
+                }
+              `}
             >
               {icon} {label}
             </button>

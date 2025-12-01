@@ -1,84 +1,71 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
-import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { navLinks } from "../data/data.navbar";
+import { FaEnvelope, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
-  const year = new Date().getFullYear();
-  const { t } = useTranslation();
+  const { t } = useTranslation(); 
+  const year = new Date().getFullYear(); 
 
   return (
     <footer
-      className="w-full border-t transition-colors duration-500 
-                 border-(--color-accent-light) dark:border-(--color-accent-dark)
-                 bg-(--color-background-light) dark:bg-(--color-background-dark)
-                 text-(--color-foreground-light) dark:text-(--color-foreground-dark)"
-    >
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between py-6 px-6 gap-4">
-        
-        {/* 🔗 Liens simples */}
-        <nav className="flex flex-wrap justify-center gap-6 text-sm font-medium">
-          {navLinks.map((item) => (
-            <Link
-              key={item.id}
-              to={item.id}
-              className="cursor-pointer hover:text-(--color-primary-light) dark:hover:text-(--color-primary-dark)
-                         transition-colors duration-300"
-            >
-              {t(item.label)}
-            </Link>
-          ))}
-        </nav>
+      className="w-full py-3">
+      <div className="max-w-6xl mx-auto px-2">
+        {/*=== Decorative horizontal line with subtle gradient ===*/}
+        <div className="h-px w-full bg-linear-to-r from-transparent via-(--color-text-muted) to-transparent mb-4"></div>
 
-        {/* 🌐 Icônes sociales */}
-        <div className="flex gap-5 text-xl">
-          <a
-            href="https://github.com/Mahmoud-Saadaoui"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="hover:text-(--color-secondary-light) dark:hover:text-(--color-secondary-dark)
-                       transition-colors duration-300"
-          >
-            <FaGithub />
-          </a>
+        {/*=== Top row: Connect label + Social Icons ===*/}
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          {/* Left side: Label + Icons */}
+          <div className="flex flex-col items-center gap-2">
+            {/* Label above icons */}
+            <span className="text-(--color-text-main) dark:text-(--color-text-main) text-sm font-medium">
+              {t("footer.connect")}
+            </span>
+            
+            {/* Social icons */}
+            <div className="flex gap-2 text-md text-(--color-text-muted) dark:text-(--color-text-muted) transition-colors duration-300">
+              <a
+                href="https://github.com/Mahmoud-Saadaoui"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="hover:text-(--color-primary) dark:hover:text-(--color-primary) hover:-translate-y-1 transition-all duration-300"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/saadaoui-mahmoud"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="hover:text-(--color-primary) dark:hover:text-(--color-primary) hover:-translate-y-1 transition-all duration-300"
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href="mailto:contact.saadaouimahmoud@gmail.com"
+                aria-label="Email"
+                className="hover:text-(--color-primary) dark:hover:text-(--color-primary) hover:-translate-y-1 transition-all duration-300"
+              >
+                <FaEnvelope />
+              </a>
+              <a
+                href="https://wa.me/21627987081"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="hover:text-(--color-primary) dark:hover:text-(--color-primary) hover:-translate-y-1 transition-all duration-300"
+              >
+                <FaWhatsapp />
+              </a>
+            </div>
+          </div>
 
-          <a
-            href="https://www.linkedin.com/in/saadaoui-mahmoud"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="hover:text-(--color-secondary-light) dark:hover:text-(--color-secondary-dark)
-                       transition-colors duration-300"
-          >
-            <FaLinkedin />
-          </a>
-
-          <a
-            href="mailto:contact.saadaouimahmoud@gmail.com"
-            aria-label="Email"
-            className="hover:text-(--color-secondary-light) dark:hover:text-(--color-secondary-dark)
-                       transition-colors duration-300"
-          >
-            <FaEnvelope />
-          </a>
-
-          <a
-            href="https://wa.me/21627987081"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-            className="hover:text-(--color-secondary-light) dark:hover:text-(--color-secondary-dark)
-                       transition-colors duration-300"
-          >
-            <FaWhatsapp />
-          </a>
+          {/* Right side: Copyright / Rights */}
+          <div className="text-xs text-(--color-text-muted) dark:text-(--color-text-muted)/60 text-center md:text-right">
+            {t("footer.rights")} © {year}
+          </div>
         </div>
-
-        {/* 📜 Copyright */}
-        <p className="text-xs text-center opacity-80">
-          © {year} Saadaoui Mahmoud. All rights reserved.
-        </p>
       </div>
     </footer>
   );

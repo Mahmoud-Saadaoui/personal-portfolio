@@ -1,78 +1,69 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import ChangeLanguage from "./ChangeLanguage";
+import Language from "./Language";
+import { Theme } from "./Theme";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { navLinks } from "../data/data.navbar";
-import { Theme } from "./Theme";
 
 const Header = () => {
   const { t } = useTranslation();
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
-    <header
-      className="
-        fixed top-0 left-0 w-full z-50 backdrop-blur-md 
-        bg-white/70 dark:bg-gray-900/70 
-        border-b border-gray-200 dark:border-gray-700
-        transform transition-transform duration-500
-        translate-y-0
-      "
-    >
-      <nav className="flex items-center justify-between px-6 py-4 max-w-6xl mx-auto">
-
-        {/* Desktop Navigation */}
-        <ul className="hidden md:flex gap-8 text-gray-800 dark:text-gray-200 font-medium">
+    <header>
+      <nav className="flex items-center justify-between px-6 py-4 max-w-3xl mx-auto w-full">
+        {/* === LEFT — Desktop Navigation === */}
+        <div>
+        <ul className="hidden md:flex gap-8 font-medium text-(--color-text-main)">
           {navLinks.map((link) => (
             <li
               key={link.id}
-              className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="hover:text-(--color-primary) transition-colors"
             >
               <Link to={link.id}>{t(link.label)}</Link>
             </li>
           ))}
         </ul>
+        {/* === Mobile Burger (separate block) === */}
+        <button
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
+          className="md:hidden flex items-center justify-center w-10 h-10
+                      text-(--color-text-main)"
+        >
+          {open ? <FaTimes size={20} /> : <FaBars size={20} />}
+        </button>
+        </div>
+        {/* === RIGHT — Actions Wrapper === */}
+        <div className="flex items-center gap-4">
 
-        {/* Actions */}
-        <div className="flex items-center gap-3">
-          <ChangeLanguage />
-          <Theme/>
-          {/* Burger Button */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-            className="md:hidden flex items-center justify-center w-10 h-10 rounded-full
-                       border border-gray-300 dark:border-gray-700
-                       bg-white/70 dark:bg-gray-900/70
-                       text-gray-800 dark:text-gray-200
-                       hover:bg-gray-200/50 dark:hover:bg-gray-700/50
-                       transition-all duration-200"
-          >
-            {menuOpen ? <FaTimes size={18} /> : <FaBars size={18} />}
-          </button>
+          {/* === Actions: Theme + Language === */}
+          <div className="flex items-center gap-2">
+            <Theme />
+            <Language />
+          </div>
         </div>
       </nav>
 
-      {/* Mobile Menu — 100% CSS Animation */}
+      {/* === Mobile Dropdown Menu === */}
       <div
         className={`
-          md:hidden overflow-hidden 
-          transition-all duration-300 ease-in-out
-          ${menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
+          md:hidden overflow-hidden transition-all duration-300 ease-in-out
+          ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
         `}
       >
-        <ul className="flex flex-col items-center gap-6 py-4 text-lg font-medium 
-                       text-gray-800 dark:text-gray-200">
+        <ul className="flex flex-col items-center gap-6 py-4 text-lg font-medium
+                       text-(--color-text-main)">
           {navLinks.map((link) => (
             <li key={link.id}>
-              <a
-                href={`#${link.id}`}
-                onClick={() => setMenuOpen(false)}
-                className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              <Link
+                to={link.id}
+                onClick={() => setOpen(false)}
+                className="hover:text-(--color-primary) transition-colors"
               >
                 {t(link.label)}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

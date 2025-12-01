@@ -12,7 +12,7 @@ import pshop from "../assets/gallery/PShop.png";
 export const projects = [
   {
     id: 1,
-    type: "beginner",
+    language: "javascript",
     key: "loopstudio",
     techStack: ["HTML", "Tailwind CSS", "JS"],
     image: loopstudio,
@@ -20,7 +20,7 @@ export const projects = [
   },
   {
     id: 2,
-    type: "beginner",
+    language: "javascript",
     key: "bookmark",
     techStack: ["HTML", "Tailwind CSS", "JS"],
     image: bookmark,
@@ -28,7 +28,7 @@ export const projects = [
   },
   {
     id: 3,
-    type: "beginner",
+    language: "javascript",
     key: "fylo",
     techStack: ["HTML", "Tailwind CSS", "JS"],
     image: fylo,
@@ -36,7 +36,7 @@ export const projects = [
   },
   {
     id: 4,
-    type: "advanced",
+    language: "javascript",
     key: "BlogApp",
     techStack: ["React", "Express.js", "MongoDB", "Redux Toolkit"],
     image: blog,
@@ -45,7 +45,7 @@ export const projects = [
   },
   {
     id: 5,
-    type: "beginner",
+    language: "javascript",
     key: "facebookClone",
     techStack: ["React"],
     image: facebook_clone,
@@ -54,7 +54,7 @@ export const projects = [
   },
   {
     id: 6,
-    type: "medium",
+    language: "typescript",
     key: "libreMap",
     techStack: ["React", "TypeScript", "MapLibre.js"],
     image: maplibre,
@@ -63,7 +63,7 @@ export const projects = [
   },
   {
     id: 7,
-    type: "medium",
+    language: "javascript",
     key: "booklyFront",
     techStack: ["React", "Context API", "React Router Dom"],
     image: bookly_frontend,
@@ -72,7 +72,7 @@ export const projects = [
   },
   {
     id: 8,
-    type: "advanced",
+    language: "javascript",
     key: "bookly",
     techStack: ["React", "MongoDB", "Express", "Redux Toolkit", "Cloudinary"],
     image: bookly,
@@ -81,7 +81,7 @@ export const projects = [
   },
   {
     id: 9,
-    type: "advanced",
+    language: "typescript",
     key: "chat",
     techStack: ["TypeScript", "React", "Zustand", "Tanstack Query", "Express", "MongoDB", "Prisma ORM", "Socket IO", "PWA"],
     image: chat_app,
@@ -90,7 +90,7 @@ export const projects = [
   },
   {
     id: 10,
-    type: "advanced",
+    language: "javascript",
     key: "pshop",
     techStack: ["React", "React Query", "Bootstrap", "MongoDB", "Cloudinary"],
     image: pshop,
@@ -101,7 +101,7 @@ export const projects = [
 
 export const filtersData = [
   { id: "all", key: "projects.filters.all" },
-  { id: "beginner", key: "projects.filters.beginner" },
-  { id: "medium", key: "projects.filters.medium" },
-  { id: "advanced", key: "projects.filters.advanced" }
+  { id: "javascript", key: "projects.filters.javascript" },
+  { id: "typescript", key: "projects.filters.typescript" }
 ];
+

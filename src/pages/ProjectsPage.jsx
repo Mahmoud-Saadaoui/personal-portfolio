@@ -1,106 +1,168 @@
 import { useState } from "react";
-import { FaThLarge, FaGithub } from "react-icons/fa";
+import { FaThLarge, FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { filtersData, projects } from "../data/data.projects";
 
+const PROJECTS_PER_PAGE = 4;
+
 const Projects = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [activeFilter, setActiveFilter] = useState("all");
+  const [currentPage, setCurrentPage] = useState(1);
+  const isRTL = i18n.language === "ar";
 
   const filters = filtersData.map(f => ({ ...f, label: t(f.key) }));
-  const filteredProjects =
-    activeFilter === "all"
-      ? projects
-      : projects.filter((p) => p.type === activeFilter);
+
+  const filteredProjects = activeFilter === "all"
+    ? projects
+    : projects.filter((p) => p.language === activeFilter);
+
+  // Pagination calculations
+  const totalPages = Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE);
+  const startIndex = (currentPage - 1) * PROJECTS_PER_PAGE;
+  const endIndex = startIndex + PROJECTS_PER_PAGE;
+  const currentProjects = filteredProjects.slice(startIndex, endIndex);
+
+  // Reset to page 1 when filter changes
+  const handleFilterChange = (filterId) => {
+    setActiveFilter(filterId);
+    setCurrentPage(1);
+  };
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { type: "spring", stiffness: 100 },
+    },
+  };
+
   return (
     <section
-      id="projects"
-      className="py-10 bg-(--color-background-light) dark:bg-(--color-background-dark) text-right"
+      className={`py-20 px-4 sm:px-6 lg:px-8 bg-[var(--color-background)] ${isRTL ? "text-right" : "text-left"
+        }`}
     >
-      {/* === Section Title === */}
-      <div className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-(--color-primary-light) dark:text-(--color-primary-dark) flex flex-col items-center justify-center gap-2">
-          <FaThLarge className="text-5xl" />
-          {t("projects.title")}
-        </h2>
-        <span className="block w-24 h-1 bg-(--color-primary-light) dark:bg-(--color-primary-dark) mx-auto mt-4 rounded"></span>
-      </div>
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <div className="inline-flex items-center justify-center p-3 mb-4 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)]">
+            <FaThLarge className="text-3xl" />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-main)] mb-4">
+            {t("projects.title")}
+          </h2>
+          <div className="h-1 w-20 bg-[var(--color-primary)] mx-auto rounded-full" />
+        </motion.div>
 
-      {/* === Filters === */}
-      <div className="flex flex-wrap justify-center gap-3 mb-12">
-        {filters.map((filter) => (
-          <button
-            key={filter.id}
-            onClick={() => setActiveFilter(filter.id)}
-            className={`px-6 py-2 rounded-md border-2 transition-all duration-300 font-medium
-              ${
-                activeFilter === filter.id
-                  ? "bg-(--color-primary-light) dark:bg-(--color-primary-dark) text-white border-(--color-primary-light) dark:border-(--color-primary-dark)"
-                  : "bg-(--color-background-light) dark:bg-(--color-background-dark) border-(--color-surface-light) dark:border-(--color-surface-dark) text-(--color-foreground-light) dark:text-(--color-foreground-dark) hover:bg-(--color-primary-light) hover:text-white dark:hover:bg-(--color-primary-dark)"
-              }`}
-          >
-            {filter.label}
-          </button>
-        ))}
-      </div>
+        {/* Filters */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {filters.map((filter) => (
+            <button
+              key={filter.id}
+              onClick={() => handleFilterChange(filter.id)}
+              className={`px-6 py-2.5 rounded-full font-medium transition-all duration-300 ${activeFilter === filter.id
+                ? "bg-[var(--color-primary)] text-white shadow-lg scale-105"
+                : "bg-[var(--color-surface)] text-[var(--color-text-main)] border border-[var(--color-text-muted)]/20 hover:border-[var(--color-primary)]/50 hover:scale-105"
+                }`}
+            >
+              {filter.label}
+            </button>
+          ))}
+        </div>
 
-      {/* === Gallery Grid === */}
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <AnimatePresence>
-            {filteredProjects.map((project) => (
+        {/* Projects Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12"
+        >
+          <AnimatePresence mode="wait">
+            {currentProjects.map((project) => (
               <motion.div
                 key={project.id}
+                variants={itemVariants}
                 layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.4 }}
-                className="project-card relative rounded-xl overflow-hidden shadow-md border bg-white dark:bg-gray-900 dark:border-gray-700"
+                className="group relative bg-[var(--color-surface)] rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-[var(--color-text-muted)]/10 hover:-translate-y-2 hover:border-[var(--color-primary)]/30"
               >
                 {/* Image */}
-                <img
-                  src={project.image}
-                  alt={t(`projects.list.${project.key}.title`)}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={t(`projects.list.${project.key}.title`)}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
 
-                {/* Overlay */}
-                <div className="project-overlay">
-                  <h3 className="text-lg font-semibold mb-2">
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[var(--color-text-main)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
                     {t(`projects.list.${project.key}.title`)}
                   </h3>
-                  <p className="text-sm mb-3">
+
+                  <p className="text-[var(--color-text-muted)] text-sm mb-4 line-clamp-3">
                     {t(`projects.list.${project.key}.description`)}
                   </p>
 
-                  <div className="flex flex-wrap justify-center gap-2 mb-3">
-                    {project.techStack.map((tech) => (
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.techStack.slice(0, 3).map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 text-xs bg-white/20 rounded-full"
+                        className="px-2 py-1 text-xs bg-[var(--color-primary)]/10 text-[var(--color-primary)] rounded-full font-medium"
                       >
                         {tech}
                       </span>
                     ))}
+                    {project.techStack.length > 3 && (
+                      <span className="px-2 py-1 text-xs text-[var(--color-text-muted)]">
+                        +{project.techStack.length - 3}
+                      </span>
+                    )}
                   </div>
 
-                  <div className="flex gap-4">
+                  {/* Links */}
+                  <div className="flex gap-3">
                     <a
                       href={project.liveDemo}
                       target="_blank"
-                      className="underline hover:text-gray-200"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 bg-[var(--color-primary)] text-white rounded-lg hover:bg-[var(--color-primary)]/90 transition-all text-sm font-medium"
                     >
-                      Live Demo
+                      <FaExternalLinkAlt className="text-xs" />
+                      Demo
                     </a>
                     {project.github && (
                       <a
                         href={project.github}
                         target="_blank"
-                        className="text-white hover:text-gray-200 text-lg"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center w-10 h-10 bg-[var(--color-surface)] border border-[var(--color-text-muted)]/20 text-[var(--color-text-main)] rounded-lg hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-all"
                       >
-                        <FaGithub />
+                        <FaGithub className="text-lg" />
                       </a>
                     )}
                   </div>
@@ -108,7 +170,47 @@ const Projects = () => {
               </motion.div>
             ))}
           </AnimatePresence>
-        </div>
+        </motion.div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-2">
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+              className={`p-2 rounded-lg transition-all ${currentPage === 1
+                ? "text-[var(--color-text-muted)]/50 cursor-not-allowed"
+                : "text-[var(--color-text-main)] hover:bg-[var(--color-surface)] hover:text-[var(--color-primary)]"
+                }`}
+            >
+              <FaChevronLeft />
+            </button>
+
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <button
+                key={page}
+                onClick={() => handlePageChange(page)}
+                className={`w-10 h-10 rounded-lg font-medium transition-all ${currentPage === page
+                  ? "bg-[var(--color-primary)] text-white shadow-lg"
+                  : "bg-[var(--color-surface)] text-[var(--color-text-main)] hover:bg-[var(--color-primary)]/10 hover:text-[var(--color-primary)]"
+                  }`}
+              >
+                {page}
+              </button>
+            ))}
+
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className={`p-2 rounded-lg transition-all ${currentPage === totalPages
+                ? "text-[var(--color-text-muted)]/50 cursor-not-allowed"
+                : "text-[var(--color-text-main)] hover:bg-[var(--color-surface)] hover:text-[var(--color-primary)]"
+                }`}
+            >
+              <FaChevronRight />
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

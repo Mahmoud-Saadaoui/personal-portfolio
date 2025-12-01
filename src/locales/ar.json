@@ -6,45 +6,24 @@
     "contact": "تواصل معي"
   },
   "about": {
-    "name": "سعداوي محمود",
-    "title": "مطور ويب متكامل | مطور MERN | شغوف بـ DevOps",
-    "bio": "مرحباً! أنا محمود، مطور ويب Full Stack شغوف بإنشاء تطبيقات ويب حديثة وقابلة للتوسع وآمنة. أتخصص في React.js وNext.js وNode.js وإدارة قواعد البيانات مثل MongoDB وPostgreSQL. كما أطبق أفضل ممارسات DevOps بما في ذلك CI/CD وDocker والنشر التلقائي لتقديم تطبيقات عالية الأداء وتجربة مستخدم سلسة.",
-    "download": "سيرتي الذاتية"
+    "name": "محمود سعداوي",
+    "title": "مطور ويب",
+    "bio": "مطور ويب متخصص في بناء تطبيقات ويب سريعة، قابلة للتوسّع، وموثوقة. بفضل خبرتي في React و Next.js و Node.js وممارسات الـDevOps مثل Docker و CI/CD، أقدّم بنى برمجية نظيفة وتجارب مستخدم سلسة من الواجهة الأمامية وحتى البنية التحتية.",
+    "contact": "تواصل معي"
   },
   "skills": {
-    "skillsTitle": "المهارات الأساسية",
-    "react": {
-      "title": "React & Next.js",
-      "description": "واجهات عالية الأداء مع SSR، مسارات API و TypeScript. كود محسن، SEO وتجربة مستخدم سلسة."
-    },
-    "state": {
-      "title": "إدارة الحالة و UI/UX",
-      "description": "إدارة حديثة للحالة باستخدام Redux، Zustand، TanStack Query. واجهات متجاوبة وأنيقة مع Tailwind و Ant Design."
-    },
-    "backend": {
-      "title": "Node.js و APIs",
-      "description": "واجهات RESTful قوية مع Express/NestJS، مصادقة JWT/OAuth2، خلفيات مرنة وقابلة للتوسع."
-    },
-    "database": {
-      "title": "قواعد البيانات",
-      "description": "خبرة MongoDB & PostgreSQL. Prisma ORM لإدارة المخططات والهجرات والاستعلامات بكفاءة."
-    },
-    "devops": {
-      "title": "DevOps والسحابة",
-      "description": "أتمتة Docker/CI-CD، إعداد VPS/Nginx، نشر AWS آمن وقابل للتوسع."
-    },
-    "design": {
-      "title": "تصميم الأنظمة",
-      "description": "بنى قابلة للتوسع، التخزين المؤقت، تحسين الأداء، DevSecOps للموثوقية والسرعة."
-    }
+    "frontend": "تطوير الواجهة الأمامية: React، Next.js، TypeScript، TailwindCSS، Bootstrap، Redux Toolkit، Zustand، TanStack Query",
+    "backend": "تطوير الواجهة الخلفية: Node.js، Express.js، NestJS، واجهات REST، WebSockets",
+    "databases": "قواعد البيانات: PostgreSQL، MongoDB، MySQL، Prisma",
+    "devops": "العمليات DevOps: Docker، خطوط CI/CD، GitHub Actions، Nginx، نشر على VPS",
+    "systemDesign": "تصميم الأنظمة: هياكل قابلة للتوسّع وتحسين الأداء"
   },
   "projects": {
     "title": "مشاريعي",
     "filters": {
       "all": "الكل",
-      "beginner": "مبتدئ",
-      "medium": "متوسط",
-      "advanced": "متقدم"
+      "javascript": "جافاسكريبت",
+      "typescript": "تايبسكريبت"
     },
     "list": {
       "bookmark": {
@@ -88,5 +67,9 @@
         "description": "Realtime Chat App هو تطبيق مراسلة حديث ومتكامل مطوّر باستخدام TypeScript وتقنيات MERN. يوفّر تسجيل دخول آمن (JWT)، وتفعيل الحساب عبر البريد الإلكتروني، ودردشة فورية (Socket.IO)، وإدارة الملف الشخصي عبر Cloudinary، وتجربة تطبيق تقدّمي (PWA) يمكن تثبيتها على أي جهاز."
       }
     }
+  },
+  "footer": {
+    "connect": "تواصل معي",
+    "rights": "جميع الحقوق محفوظة"
   }
 }

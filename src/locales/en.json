@@ -6,45 +6,24 @@
     "contact": "Contact"
   },
   "about": {
-    "name": "Saadaoui Mahmoud",
-    "title": "Full Stack Web Developer | MERN Stack Developer | DevOps Enthusiast",
-    "bio": "Hello! I'm Saadaoui Mahmoud, a passionate Full Stack Web Developer focused on creating modern, scalable, and secure web applications. I specialize in React.js, Next.js, Node.js, and database management with MongoDB and PostgreSQL. I also implement DevOps best practices including CI/CD, Docker, and automated deployments to deliver high-performance applications with seamless user experiences.",
-    "download": "Download Resume"
+    "name": "Mahmoud Saadaoui",
+    "title": "Full Stack Web Developer",
+    "bio": "Full-stack developer focused on building fast, scalable, and reliable web applications. With strong skills in React, Next.js, Node.js, and DevOps (Docker, CI/CD), I deliver clean architectures and seamless user experiences from frontend to infrastructure.",
+    "contact": "Contact Me"
   },
   "skills": {
-    "skillsTitle": "Core Expertise",
-    "react": {
-      "title": "React & Next.js",
-      "description": "High-performance interfaces with SSR, API Routes, and TypeScript. Optimized code, SEO, and UX for seamless experiences."
-    },
-    "state": {
-      "title": "State & UI/UX",
-      "description": "Modern state management with Redux, Zustand, TanStack Query. Responsive, elegant UIs with Tailwind & Ant Design."
-    },
-    "backend": {
-      "title": "Node.js & APIs",
-      "description": "Robust RESTful APIs with Express/NestJS, JWT/OAuth2 auth, modular, scalable backends."
-    },
-    "database": {
-      "title": "Databases",
-      "description": "MongoDB & PostgreSQL expertise. Prisma ORM for efficient schema, migrations, and optimized queries."
-    },
-    "devops": {
-      "title": "DevOps & Cloud",
-      "description": "Docker & CI/CD automation, VPS/Nginx configuration, AWS deployments with security and scalability."
-    },
-    "design": {
-      "title": "System Design",
-      "description": "Scalable architectures, caching, performance optimization, DevSecOps for reliability and speed."
-    }
+    "frontend": "Frontend Development: React, Next.js, TypeScript, TailwindCSS, Bootstrap, Redux Toolkit, Zustand, TanStack Query",
+    "backend": "Backend Development: Node.js, Express.js, NestJS, RESTful APIs, WebSockets",
+    "databases": "Databases: PostgreSQL, MongoDB, MySQL, Prisma",
+    "devops": "DevOps: Docker, CI/CD pipelines, GitHub Actions, Nginx, VPS deployments",
+    "systemDesign": "System Design: Scalable architectures and performance optimization"
   },
   "projects": {
     "title": "My Projects",
     "filters": {
       "all": "All",
-      "beginner": "Beginner",
-      "medium": "Medium",
-      "advanced": "Advanced"
+      "javascript": "JavaScript",
+      "typescript": "TypeScript"
     },
     "list": {
       "bookmark": {
@@ -88,5 +67,9 @@
         "description": "Realtime Chat App is a modern, full-featured messaging platform built with TypeScript and the MERN stack. It includes secure authentication (JWT), email verification, real-time chat (Socket.IO), profile management via Cloudinary, and a smooth PWA experience installable on any device."
       }
     }
+  },
+  "footer": {
+    "connect": "Let's connect",
+    "rights": "All rights reserved"
   }
 }

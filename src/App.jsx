@@ -8,24 +8,26 @@ import SkillsPage from "./pages/SkillsPage";
 import { Route, Routes } from "react-router-dom";
 
 const App = () => {
-  const { i18n } = useTranslation()
+  const { i18n } = useTranslation();
   useEffect(() => {
     document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
   }, [i18n.language]);
 
   return (
-      <div className="min-h-screen bg-zinc-100 dark:bg-zinc-600 ">
-      <Header/>
-      <main className="main">
+    <div
+      className="min-h-screen bg-(--color-background) dark:bg-(--color-background)
+        text-(--color-text-main) dark:text-(--color-text-main)
+        transition-colors duration-300"
+    >
+      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/skills" element={<SkillsPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
       </Routes>
-      </main>
-      <Footer/>
+      <Footer />
     </div>
-  )
+  );
 };
 
 export default App;

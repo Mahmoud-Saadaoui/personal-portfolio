@@ -5,7 +5,7 @@ export const navLinks = [
 ];
 
 export const LANGUAGES = [
-  { code: "en", label: "English", flag: "🇬🇧" },
-  { code: "fr", label: "Français", flag: "🇫🇷" },
-  { code: "ar", label: "العربية", flag: "🇸🇦" },
+  { code: "en", label: "English" },
+  { code: "fr", label: "Français" },
+  { code: "ar", label: "العربية" },
 ];

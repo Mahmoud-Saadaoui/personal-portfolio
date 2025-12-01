@@ -7,23 +7,42 @@ body {
   font-family: "Cairo", sans-serif;
 }
 
-.main {
-  min-height: calc(100vh-4rem); 
-  overflow-x: auto;
+:root {
+  --color-primary: #4F46E5;
+  --color-secondary: #64748B;
+  --color-accent: #06B6D4;
+
+  --color-background: #F8FAFC;
+  --color-surface: #FFFFFF;
+
+  --color-text-main: #0F172A;
+  --color-text-muted: #64748B;
 }
 
-/* ==== Change Language Animation ==== */
-@keyframes dropdown {
+.dark {
+  --color-primary: #818CF8;
+  --color-secondary: #94A3B8;
+  --color-accent: #22D3EE;
+
+  --color-background: #0F172A;
+  --color-surface: #1E293B;
+
+  --color-text-main: #F8FAFC;
+  --color-text-muted: #CBD5E1;
+}
+
+/* === Dropdown Animation ==== */
+@keyframes fade-slide {
   0% {
     opacity: 0;
-    transform: translateY(-8px) scale(0.97);
+    transform: translateY(-6px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0px) scale(1);
+    transform: translateY(0);
   }
 }
 
-.animate-dropdown {
-  animation: dropdown 0.18s ease-out forwards;
+.animate-fade-slide {
+  animation: fade-slide 0.25s ease-out;
 }

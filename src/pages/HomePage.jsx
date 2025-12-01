@@ -1,107 +1,113 @@
-import { FaDownload } from "react-icons/fa";
-import profile from "../assets/profile.png";
-// import bg from "../assets/bg.jpg";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import profile from "../assets/profile.png";
 import { socials } from "../data/data.about";
-import cv_fr from "../assets/files/cv-fr.pdf";
-import cv_ar from "../assets/files/cv-ar.pdf";
-import cv_en from "../assets/files/cv-en.pdf";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language;
-  let cv;
-  currentLang === "en"
-    ? (cv = cv_en)
-    : currentLang === "fr"
-    ? (cv = cv_fr)
-    : (cv = cv_ar);
+  const lang = i18n.language;
+  const isRTL = lang === "ar";
+  const textAlign = isRTL ? "text-right" : "text-left";
+
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { type: "spring", stiffness: 100 },
+    },
+  };
+
   return (
-    <section
-      id="about"
-      className="relative flex flex-col items-center justify-center"
-    >
-
-      {/* Card principale */}
-      <div
-        className="
-      -mt-24
-      px-8 md:px-16 py-12
-      text-center
-      rounded-2xl
-      shadow-2xl
-      max-w-3xl
-      backdrop-blur-md
-      z-10
-      transition-all duration-500
-    "
+    <section className="min-h-[80vh] flex items-center justify-center py-6 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <motion.div
+        className={`max-w-6xl w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-12 ${textAlign}`}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
       >
-        {/* Image profil */}
-        <img
-          className="
-        w-36 h-36
-        rounded-full
-        mx-auto mb-6
-        border-[5px]
-        border-(--color-primary-light) dark:border-(--color-primary-dark)
-        shadow-md
-      "
-          src={profile}
-          alt="personal-img"
-        />
+        {/* === Text Content === */}
+        <div className="flex-1 flex flex-col items-center lg:items-start space-y-4">
+          <motion.div variants={itemVariants} className={`space-y-2 text-center ${isRTL ? "lg:text-right" : "lg:text-left"} w-full`}>
+            <h2 className="text-lg md:text-xl font-medium text-[var(--color-accent)] tracking-wide uppercase">
+              {t("about.title")}
+            </h2>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold pb-4 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-text-main)] to-[var(--color-primary)]">
+              {t("about.name")}
+            </h1>
+          </motion.div>
 
-        {/* Nom et titre */}
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-[50px] text-(--color-primary-light) dark:text-(--color-primary-dark)">
-          {t("about.name")}
-          <span className="block text-xl md:text-2xl mt-2 text-(--color-secondary-light) dark:text-(--color-secondary-dark)">
-            {t("about.title")}
-          </span>
-        </h1>
+          <motion.p
+            variants={itemVariants}
+            className={`text-base md:text-lg leading-relaxed text-[var(--color-text-muted)] max-w-2xl text-center ${isRTL ? "lg:text-right" : "lg:text-left"}`}
+          >
+            {t("about.bio")}
+          </motion.p>
 
-        {/* Réseaux sociaux */}
-        <ul className="flex justify-center gap-5 mb-10 text-3xl">
-          {socials.map((item, idx) => (
-            <li key={idx}>
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noreferrer"
-                className="
-              text-(--color-foreground-light) dark:text-(--color-foreground-dark)
-              hover:text-(--color-primary-light) dark:hover:text-(--color-primary-dark)
-              transition-colors duration-300
-            "
+          {/* === Social Icons === */}
+          <motion.ul variants={itemVariants} className="flex gap-4 mt-4">
+            {socials.map((item, idx) => (
+              <motion.li
+                key={idx}
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <item.icon />
-              </a>
-            </li>
-          ))}
-        </ul>
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`${item.class} flex items-center justify-center w-12 h-12 rounded-full bg-[var(--color-surface)] text-[var(--color-secondary)] shadow-md hover:text-[var(--color-accent)] hover:shadow-lg transition-all duration-300 border border-[var(--color-secondary)]/10`}
+                >
+                  <item.icon className="text-xl" />
+                </a>
+              </motion.li>
+            ))}
+          </motion.ul>
 
-        {/* Bio */}
-        <p className="text-base md:text-lg leading-8 text-(--color-foreground-light)/90 dark:text-(--color-foreground-dark)/90 mb-10">
-          {t("about.bio")}
-        </p>
+          {/* === CTA Buttons === */}
+          <motion.div variants={itemVariants} className="flex gap-4 mt-6">
+            <button
+              className="cursor-pointer px-8 py-3 rounded-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)] text-white font-bold shadow-lg hover:shadow-[var(--color-primary)]/40 hover:scale-105 transition-all duration-300"
+              onClick={() => navigate("/contact")}
+            >
+              {t("about.contact")}
+            </button>
+          </motion.div>
+        </div>
 
-        {/* Bouton de téléchargement */}
-        <a
-          href={cv}
-          download={`cv-${currentLang}`}
-          className="
-        inline-flex items-center gap-2
-        text-lg font-semibold
-        bg-(--color-primary-light) dark:bg-(--color-primary-dark)
-        hover:bg-(--color-secondary-light) dark:hover:bg-(--color-secondary-dark)
-        text-white
-        px-6 py-3 rounded-full
-        transition-all duration-300
-        shadow-lg hover:shadow-xl
-      "
+        {/* === Profile Image === */}
+        <motion.div
+          className="flex-1 flex justify-center lg:justify-end relative"
+          variants={itemVariants}
         >
-          <FaDownload className="text-xl" />
-          {t("about.download")}
-        </a>
-      </div>
+          {/* Decorative Circle Background */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-primary)]/20 to-[var(--color-accent)]/20 rounded-full blur-3xl transform scale-90 -z-10 animate-pulse" />
+
+          <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80">
+            <div className="absolute inset-0 rounded-full border-2 border-[var(--color-primary)]/30 animate-[spin_10s_linear_infinite]" />
+            <div className="absolute inset-2 rounded-full border-2 border-[var(--color-accent)]/30 animate-[spin_15s_linear_infinite_reverse]" />
+            <img
+              src={profile}
+              alt="profile"
+              className="w-full h-full object-cover rounded-full border-4 border-[var(--color-surface)] shadow-2xl z-10 relative"
+            />
+          </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
