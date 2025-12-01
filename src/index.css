@@ -37,6 +37,7 @@ body {
     opacity: 0;
     transform: translateY(-6px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -45,4 +46,33 @@ body {
 
 .animate-fade-slide {
   animation: fade-slide 0.25s ease-out;
+}
+
+/* === Custom Scrollbar === */
+/* For Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 10px;
+  border: 2px solid var(--color-background);
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-background);
 }
