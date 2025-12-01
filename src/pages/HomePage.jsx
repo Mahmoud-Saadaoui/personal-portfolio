@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import profile from "../assets/profile.png";
 import { socials } from "../data/data.about";
 import { useNavigate } from "react-router-dom";
+import { containerVariants, itemVariants } from "../variants";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -10,28 +11,6 @@ const Home = () => {
   const lang = i18n.language;
   const isRTL = lang === "ar";
   const textAlign = isRTL ? "text-right" : "text-left";
-
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { type: "spring", stiffness: 100 },
-    },
-  };
-
   return (
     <section className="min-h-[80vh] flex items-center justify-center py-6 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <motion.div

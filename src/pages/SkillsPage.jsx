@@ -9,6 +9,8 @@ import {
   FaGraduationCap
 } from "react-icons/fa";
 import { skillsKeys } from "../data/data.skills";
+import Heading from "../components/Heading";
+import { containerVariants, itemVariants } from "../variants";
 
 const iconMap = {
   "skills.frontend": <FaCode />,
@@ -22,43 +24,11 @@ const Skills = () => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "ar";
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { type: "spring", stiffness: 100 },
-    },
-  };
-
   return (
     <section className={`py-4 px-4 sm:px-6 lg:px-8 bg-[var(--color-background)] overflow-hidden ${isRTL ? "text-right" : "text-left"}`}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center justify-center p-3 mb-4 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)]">
-            <FaGraduationCap className="text-3xl" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-main)] mb-4">
-            {t("navbar.skills")}
-          </h2>
-          <div className="h-1 w-20 bg-[var(--color-primary)] mx-auto rounded-full" />
-        </motion.div>
+        <Heading title={t("navbar.skills")} icon={FaGraduationCap} />
 
         {/* Grid */}
         <motion.div

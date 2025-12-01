@@ -3,6 +3,8 @@ import { FaThLarge, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { filtersData, projects } from "../data/data.projects";
+import Heading from "../components/Heading";
+import { containerVariants, itemVariants } from "../variants";
 
 const Projects = () => {
   const { t, i18n } = useTranslation();
@@ -19,25 +21,6 @@ const Projects = () => {
     setActiveFilter(filterId);
   };
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { type: "spring", stiffness: 100 },
-    },
-  };
-
   return (
     <section
       className={`py-4 px-4 sm:px-6 lg:px-8 bg-[var(--color-background)] ${isRTL ? "text-right" : "text-left"
@@ -45,20 +28,7 @@ const Projects = () => {
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <div className="inline-flex items-center justify-center p-3 mb-4 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)]">
-            <FaThLarge className="text-3xl" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-main)] mb-4">
-            {t("projects.title")}
-          </h2>
-          <div className="h-1 w-20 bg-[var(--color-primary)] mx-auto rounded-full" />
-        </motion.div>
+        <Heading title={t("projects.title")} icon={FaThLarge} />
 
         {/* Filters */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
