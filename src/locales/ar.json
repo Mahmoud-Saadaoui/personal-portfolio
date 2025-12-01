@@ -1,84 +1,84 @@
 {
-  "navbar": {
-    "about": "نبذة عنّي",
-    "skills": "المؤهلات",
-    "projects": " سابقة الأعمال",
-    "contact": "تواصل معي"
-  },
-  "about": {
-    "name": "محمود سعداوي",
-    "title": "مطور ويب",
-    "bio": "مطور ويب متخصص في بناء تطبيقات ويب سريعة، قابلة للتوسّع، وموثوقة. بفضل خبرتي في React و Next.js و Node.js وممارسات الـDevOps مثل Docker و CI/CD، أقدّم بنى برمجية نظيفة وتجارب مستخدم سلسة من الواجهة الأمامية وحتى البنية التحتية.",
-    "contact": "تواصل معي"
-  },
-  "capabilities": {
-    "frontend": "تطوير الواجهة الأمامية: React، Next.js، TypeScript، TailwindCSS، Bootstrap، Redux Toolkit، Zustand، TanStack Query",
-    "backend": "تطوير الواجهة الخلفية: Node.js، Express.js، NestJS، واجهات REST، WebSockets",
-    "databases": "قواعد البيانات: PostgreSQL، MongoDB، MySQL، Prisma",
-    "devops": "العمليات DevOps: Docker، خطوط CI/CD، GitHub Actions، Nginx، نشر على VPS",
-    "systemDesign": "تصميم الأنظمة: هياكل قابلة للتوسّع وتحسين الأداء"
-  },
-  "projects": {
-    "title": "مشاريعي",
-    "discoverMore": "اكتشف المزيد",
-    "notFound": "المشروع غير موجود",
-    "backToProjects": "العودة إلى المشاريع",
-    "liveDemo": "عرض مباشر",
-    "techStack": "التقنيات المستخدمة",
-    "aboutProject": "حول هذا المشروع",
-    "category": "الفئة",
-    "technologies": "التقنيات",
-    "technologiesUsed": "تقنية مستخدمة",
-    "filters": {
-      "all": "الكل",
-      "javascript": "Javascript",
-      "typescript": "Typescript"
+    "navbar": {
+        "about": "نبذة عنّي",
+        "skills": "المؤهلات",
+        "projects": " سابقة الأعمال",
+        "contact": "تواصل معي"
     },
-    "list": {
-      "bookmark": {
-        "title": "Bookmark",
-        "description": "مشروع Bookmark هو صفحة هبوط عصرية ومتجاوبة بالكامل تم إنشاؤها باستخدام HTML و JavaScript و Tailwind CSS. مستوحاة من تصميم Frontend Mentor، يهدف هذا المشروع إلى إتقان أساسيات Tailwind CSS وتصميم الواجهات المتجاوبة."
-      },
-      "fylo": {
-        "title": "Fylo",
-        "description": "مشروع Fylo هو صفحة هبوط أنيقة ومتجاوبة تم تطويرها باستخدام HTML و JavaScript و Tailwind CSS، ويتميز بخاصية الوضع الفاتح والداكن. ساعدني هذا المشروع على التعمق في تخصيص Tailwind وإدارة السمات مع الحفاظ على واجهة عصرية وأنيقة."
-      },
-      "loopstudio": {
-        "title": "Loopstudio",
-        "description": "مشروع Loopstudios هو صفحة هبوط متجاوبة تم إنشاؤها باستخدام HTML و JavaScript و Tailwind CSS. مستوحى من تحديات Frontend Mentor، ساعدني هذا المشروع على تعزيز فهمي لتصميم التخطيطات باستخدام Tailwind CSS وإنشاء واجهات مرنة وجذابة."
-      },
-      "BlogApp": {
-        "title": "Blog Pro – تطبيق مدونة متكامل",
-        "description": "مشروع Blog Pro هو تطبيق مدونة متكامل بتقنية MERN (MongoDB, Express, React, Node.js) تم تطويره لأغراض تعليمية ولعرض المهارات في معرض الأعمال.يتيح للمستخدمين إنشاء وتعديل وإدارة المقالات مع رفع الصور عبر Cloudinary، ونظام تسجيل دخول آمن باستخدام JWT، وواجهة حديثة وسريعة الاستجابة مبنية بـ React. الواجهة الخلفية تعتمد على Node.js وExpress مع قاعدة بيانات MongoDB Atlas."
-      },
-      "facebookClone": {
-        "title": "Facebook Clone",
-        "description": "مشروع واجهة أمامية حديث بـ React.js يبرز مهاراتي في الواجهات الديناميكية والتصميم البسيط."
-      },
-      "libreMap": {
-        "title": "Libre Map",
-        "description": "تطبيق خرائط ديناميكي تم تطويره بـ React.js وMaplibre.js، يعرض عواصم العالم مع نوافذ تفاعلية وتصميم قابل للتخصيص."
-      },
-      "booklyFront": {
-        "title": "Book Store",
-        "description": "تطبيق Book Store مطوّر باستخدام React.js ويستخدم Context API لإدارة الحالة وReact Toastify للتنبيهات. يمكن للمستخدمين إضافة الكتب إلى السلة وتعديل الكمية وعرض السعر الإجمالي بشكل فوري."
-      },
-      "bookly": {
-        "title": "Bookly | MERN App",
-        "description": "Bookly هو نظام متكامل لإدارة المكتبة تم تطويره باستخدام تقنيات MERN. يتيح للمسؤول إدارة الكتب (إضافة، تعديل، حذف)، وللمستخدمين تقييم الكتب وإضافة المفضلة. يُبرز المشروع مهاراتي في تطوير الواجهتين الأمامية والخلفية، تأمين المسارات بـ JWT، التعامل مع الصور عبر Cloudinary، واستخدام Redux Toolkit لإدارة الحالة."
-      },
-      "pshop": {
-        "title": "PShop",
-        "description": "PShop هو منصة تجارة إلكترونية متكاملة تم تطويرها باستخدام تقنيات MERN وRedux Toolkit. يمكن للمستخدمين تصفح المنتجات وإدارة سلة المشتريات وترك التقييمات وإتمام عملية الشراء عبر PayPal أو بطاقة الائتمان. يستطيع المسؤولون إدارة المنتجات والطلبات والمستخدمين من خلال لوحة تحكم حديثة، مع تخزين صور المنتجات في Cloudinary لضمان السرعة والأمان."
-      },
-      "chat": {
-        "title": "تطبيق محادثة فورية",
-        "description": "Realtime Chat App هو تطبيق مراسلة حديث ومتكامل مطوّر باستخدام TypeScript وتقنيات MERN. يوفّر تسجيل دخول آمن (JWT)، وتفعيل الحساب عبر البريد الإلكتروني، ودردشة فورية (Socket.IO)، وإدارة الملف الشخصي عبر Cloudinary، وتجربة تطبيق تقدّمي (PWA) يمكن تثبيتها على أي جهاز."
-      }
+    "about": {
+        "name": "محمود سعداوي",
+        "title": "مطور ويب",
+        "bio": "مطور ويب متخصص في بناء تطبيقات ويب سريعة، قابلة للتوسّع، وموثوقة. بفضل خبرتي في React و Next.js و Node.js وممارسات الـDevOps مثل Docker و CI/CD، أقدّم بنى برمجية نظيفة وتجارب مستخدم سلسة من الواجهة الأمامية وحتى البنية التحتية.",
+        "contact": "تواصل معي"
+    },
+    "capabilities": {
+        "frontend": "تطوير الواجهة الأمامية: React، Next.js، TypeScript، TailwindCSS، Bootstrap، Redux Toolkit، Zustand، TanStack Query",
+        "backend": "تطوير الواجهة الخلفية: Node.js، Express.js، NestJS، واجهات REST، WebSockets",
+        "databases": "قواعد البيانات: PostgreSQL، MongoDB، MySQL، Prisma",
+        "devops": "العمليات DevOps: Docker، خطوط CI/CD، GitHub Actions، Nginx، نشر على VPS",
+        "systemDesign": "تصميم الأنظمة: هياكل قابلة للتوسّع وتحسين الأداء"
+    },
+    "projects": {
+        "title": "مشاريعي",
+        "discoverMore": "اكتشف المزيد",
+        "notFound": "المشروع غير موجود",
+        "backToProjects": "العودة إلى المشاريع",
+        "liveDemo": "عرض مباشر",
+        "techStack": "التقنيات المستخدمة",
+        "aboutProject": "حول هذا المشروع",
+        "category": "الفئة",
+        "technologies": "التقنيات",
+        "technologiesUsed": "تقنية مستخدمة",
+        "filters": {
+            "all": "الكل",
+            "javascript": "Javascript",
+            "typescript": "Typescript"
+        },
+        "list": {
+            "bookmark": {
+                "title": "Bookmark",
+                "description": "مشروع Bookmark هو صفحة هبوط عصرية ومتجاوبة بالكامل تم إنشاؤها باستخدام HTML و JavaScript و Tailwind CSS. مستوحاة من تصميم Frontend Mentor، يهدف هذا المشروع إلى إتقان أساسيات Tailwind CSS وتصميم الواجهات المتجاوبة."
+            },
+            "fylo": {
+                "title": "Fylo",
+                "description": "مشروع Fylo هو صفحة هبوط أنيقة ومتجاوبة تم تطويرها باستخدام HTML و JavaScript و Tailwind CSS، ويتميز بخاصية الوضع الفاتح والداكن. ساعدني هذا المشروع على التعمق في تخصيص Tailwind وإدارة السمات مع الحفاظ على واجهة عصرية وأنيقة."
+            },
+            "loopstudio": {
+                "title": "Loopstudio",
+                "description": "مشروع Loopstudios هو صفحة هبوط متجاوبة تم إنشاؤها باستخدام HTML و JavaScript و Tailwind CSS. مستوحى من تحديات Frontend Mentor، ساعدني هذا المشروع على تعزيز فهمي لتصميم التخطيطات باستخدام Tailwind CSS وإنشاء واجهات مرنة وجذابة."
+            },
+            "BlogApp": {
+                "title": "Blog Pro – تطبيق مدونة متكامل",
+                "description": "مشروع Blog Pro هو تطبيق مدونة متكامل بتقنية MERN (MongoDB, Express, React, Node.js) تم تطويره لأغراض تعليمية ولعرض المهارات في معرض الأعمال.يتيح للمستخدمين إنشاء وتعديل وإدارة المقالات مع رفع الصور عبر Cloudinary، ونظام تسجيل دخول آمن باستخدام JWT، وواجهة حديثة وسريعة الاستجابة مبنية بـ React. الواجهة الخلفية تعتمد على Node.js وExpress مع قاعدة بيانات MongoDB Atlas."
+            },
+            "facebookClone": {
+                "title": "Facebook Clone",
+                "description": "مشروع واجهة أمامية حديث بـ React.js يبرز مهاراتي في الواجهات الديناميكية والتصميم البسيط."
+            },
+            "libreMap": {
+                "title": "Libre Map",
+                "description": "تطبيق خرائط ديناميكي تم تطويره بـ React.js وMaplibre.js، يعرض عواصم العالم مع نوافذ تفاعلية وتصميم قابل للتخصيص."
+            },
+            "booklyFront": {
+                "title": "Book Store",
+                "description": "تطبيق Book Store مطوّر باستخدام React.js ويستخدم Context API لإدارة الحالة وReact Toastify للتنبيهات. يمكن للمستخدمين إضافة الكتب إلى السلة وتعديل الكمية وعرض السعر الإجمالي بشكل فوري."
+            },
+            "bookly": {
+                "title": "Bookly | MERN App",
+                "description": "Bookly هو نظام متكامل لإدارة المكتبة تم تطويره باستخدام تقنيات MERN. يتيح للمسؤول إدارة الكتب (إضافة، تعديل، حذف)، وللمستخدمين تقييم الكتب وإضافة المفضلة. يُبرز المشروع مهاراتي في تطوير الواجهتين الأمامية والخلفية، تأمين المسارات بـ JWT، التعامل مع الصور عبر Cloudinary، واستخدام Redux Toolkit لإدارة الحالة."
+            },
+            "pshop": {
+                "title": "PShop",
+                "description": "PShop هو منصة تجارة إلكترونية متكاملة تم تطويرها باستخدام تقنيات MERN وRedux Toolkit. يمكن للمستخدمين تصفح المنتجات وإدارة سلة المشتريات وترك التقييمات وإتمام عملية الشراء عبر PayPal أو بطاقة الائتمان. يستطيع المسؤولون إدارة المنتجات والطلبات والمستخدمين من خلال لوحة تحكم حديثة، مع تخزين صور المنتجات في Cloudinary لضمان السرعة والأمان."
+            },
+            "chat": {
+                "title": "تطبيق محادثة فورية",
+                "description": "Realtime Chat App هو تطبيق مراسلة حديث ومتكامل مطوّر باستخدام TypeScript وتقنيات MERN. يوفّر تسجيل دخول آمن (JWT)، وتفعيل الحساب عبر البريد الإلكتروني، ودردشة فورية (Socket.IO)، وإدارة الملف الشخصي عبر Cloudinary، وتجربة تطبيق تقدّمي (PWA) يمكن تثبيتها على أي جهاز."
+            }
+        }
+    },
+    "footer": {
+        "connect": "تواصل معي",
+        "rights": "جميع الحقوق محفوظة"
     }
-  },
-  "footer": {
-    "connect": "تواصل معي",
-    "rights": "جميع الحقوق محفوظة"
-  }
 }
