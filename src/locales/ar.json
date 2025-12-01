@@ -22,8 +22,8 @@
     "title": "مشاريعي",
     "filters": {
       "all": "الكل",
-      "javascript": "جافاسكريبت",
-      "typescript": "تايبسكريبت"
+      "javascript": "Javascript",
+      "typescript": "Typescript"
     },
     "list": {
       "bookmark": {
