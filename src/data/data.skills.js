@@ -1,7 +1,7 @@
 export const skillsKeys = [
-  { key: "skills.frontend" },
-  { key: "skills.backend" },
-  { key: "skills.databases" },
-  { key: "skills.devops" },
-  { key: "skills.systemDesign" },
+  { key: "capabilities.frontend" },
+  { key: "capabilities.backend" },
+  { key: "capabilities.databases" },
+  { key: "capabilities.devops" },
+  { key: "capabilities.systemDesign" },
 ];

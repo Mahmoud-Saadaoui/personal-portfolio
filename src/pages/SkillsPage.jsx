@@ -13,11 +13,11 @@ import Heading from "../components/common/Heading";
 import { containerVariants, itemVariants } from "../utils/variants";
 
 const iconMap = {
-  "skills.frontend": <FaCode />,
-  "skills.backend": <FaServer />,
-  "skills.databases": <FaDatabase />,
-  "skills.devops": <FaCloud />,
-  "skills.systemDesign": <FaLayerGroup />,
+  "capabilities.frontend": <FaCode />,
+  "capabilities.backend": <FaServer />,
+  "capabilities.databases": <FaDatabase />,
+  "capabilities.devops": <FaCloud />,
+  "capabilities.systemDesign": <FaLayerGroup />,
 };
 
 const Skills = () => {

@@ -11,7 +11,7 @@
     "bio": "مطور ويب متخصص في بناء تطبيقات ويب سريعة، قابلة للتوسّع، وموثوقة. بفضل خبرتي في React و Next.js و Node.js وممارسات الـDevOps مثل Docker و CI/CD، أقدّم بنى برمجية نظيفة وتجارب مستخدم سلسة من الواجهة الأمامية وحتى البنية التحتية.",
     "contact": "تواصل معي"
   },
-  "skills": {
+  "capabilities": {
     "frontend": "تطوير الواجهة الأمامية: React، Next.js، TypeScript، TailwindCSS، Bootstrap، Redux Toolkit، Zustand، TanStack Query",
     "backend": "تطوير الواجهة الخلفية: Node.js، Express.js، NestJS، واجهات REST، WebSockets",
     "databases": "قواعد البيانات: PostgreSQL، MongoDB، MySQL، Prisma",
@@ -20,6 +20,15 @@
   },
   "projects": {
     "title": "مشاريعي",
+    "discoverMore": "اكتشف المزيد",
+    "notFound": "المشروع غير موجود",
+    "backToProjects": "العودة إلى المشاريع",
+    "liveDemo": "عرض مباشر",
+    "techStack": "التقنيات المستخدمة",
+    "aboutProject": "حول هذا المشروع",
+    "category": "الفئة",
+    "technologies": "التقنيات",
+    "technologiesUsed": "تقنية مستخدمة",
     "filters": {
       "all": "الكل",
       "javascript": "Javascript",

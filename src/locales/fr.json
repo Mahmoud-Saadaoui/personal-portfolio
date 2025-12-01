@@ -11,7 +11,7 @@
     "bio": "Développeur full-stack spécialisé dans la création d'applications web rapides, évolutives et fiables. Grâce à une solide maîtrise de React, Next.js, Node.js et des pratiques DevOps (Docker, CI/CD), je conçois des architectures propres et des expériences utilisateur fluides, du frontend jusqu'à l'infrastructure.",
     "contact": "Me Contacter"
   },
-  "skills": {
+  "capabilities": {
     "frontend": "Développement Frontend : React, Next.js, TypeScript, TailwindCSS, Bootstrap, Redux Toolkit, Zustand, TanStack Query",
     "backend": "Développement Backend : Node.js, Express.js, NestJS, APIs REST, WebSockets",
     "databases": "Bases de données : PostgreSQL, MongoDB, MySQL, Prisma",
@@ -20,6 +20,15 @@
   },
   "projects": {
     "title": "Mes Projets",
+    "discoverMore": "Découvrir Plus",
+    "notFound": "Projet Introuvable",
+    "backToProjects": "Retour aux Projets",
+    "liveDemo": "Démo en Direct",
+    "techStack": "Stack Technique",
+    "aboutProject": "À Propos de ce Projet",
+    "category": "Catégorie",
+    "technologies": "Technologies",
+    "technologiesUsed": "technologies utilisées",
     "filters": {
       "all": "Tous",
       "javascript": "JavaScript",
