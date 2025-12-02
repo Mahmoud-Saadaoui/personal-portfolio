@@ -1,6 +1,10 @@
 import { Helmet } from 'react-helmet-async';
 
-const Meta = ({ title, description, keywords }) => {
+const Meta = ({
+  title = "My Website",
+  description = "Welcome to my website",
+  keywords = "mahmoud, mahmoud saadaoui, saadaoui, my website"
+}) => {
   return (
     <Helmet>
       <title>{title}</title>
@@ -18,12 +22,6 @@ const Meta = ({ title, description, keywords }) => {
       <meta name="twitter:description" content={description} />
     </Helmet>
   );
-};
-
-Meta.defaultProps = {
-  title: "My Website",
-  description: "Welcome to my website",
-  keywords: "mahmoud, mahmoud saadaoui, saadaoui, my website",
 };
 
 export default Meta;
