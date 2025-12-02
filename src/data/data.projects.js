@@ -24,7 +24,7 @@ export const projects = [
     key: "bookmark",
     techStack: ["HTML", "Tailwind CSS", "JS"],
     image: bookmark,
-    liveDemo: "m-bookmark-app.netlify.app",
+    liveDemo: "https://m-bookmark-app.netlify.app",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ export const projects = [
     key: "fylo",
     techStack: ["HTML", "Tailwind CSS", "JS"],
     image: fylo,
-    liveDemo: "m-fylo.netlify.app",
+    liveDemo: "https://m-fylo.netlify.app",
   },
   {
     id: 4,
