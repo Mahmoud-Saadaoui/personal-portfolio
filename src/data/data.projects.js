@@ -40,7 +40,7 @@ export const projects = [
     key: "BlogApp",
     techStack: ["React", "Express.js", "MongoDB", "Redux Toolkit"],
     image: blog,
-    liveDemo: "https://blogapp.65.lebondeveloppeur.net",
+    // liveDemo: "https://blogapp.65.lebondeveloppeur.net",
     github: "https://github.com/Mahmoud-Saadaoui/Blog-App"
   },
   {
@@ -49,7 +49,7 @@ export const projects = [
     key: "facebookClone",
     techStack: ["React"],
     image: facebook_clone,
-    liveDemo: "https://m-fb.netlify.app",
+    liveDemo: "https://m-face-book-clone.netlify.app",
     github: "https://github.com/Mahmoud-Saadaoui/facebook-clone"
   },
   {
