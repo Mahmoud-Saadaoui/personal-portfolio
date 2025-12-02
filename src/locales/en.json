@@ -77,6 +77,27 @@
       }
     }
   },
+  "seo": {
+    "home": {
+      "title": "Mahmoud Saadaoui | Web Developer",
+      "description": "Full-stack developer specialized in React, Next.js, Node.js, and DevOps. Building fast, scalable, and reliable web applications with clean architecture and seamless user experiences.",
+      "keywords": "Mahmoud Saadaoui, Full Stack Developer, React Developer, Next.js, Node.js, TypeScript, Web Development, DevOps, Docker, CI/CD"
+    },
+    "projects": {
+      "title": "Projects | Mahmoud Saadaoui",
+      "description": "Explore my portfolio of web development projects including MERN stack applications, React projects, and fullstack solutions. See my work with React, Next.js, Node.js, and modern web technologies.",
+      "keywords": "Web Development Projects, MERN Stack, React Projects, Portfolio, JavaScript, TypeScript, Fullstack Projects"
+    },
+    "skills": {
+      "title": "Skills | Mahmoud Saadaoui",
+      "description": "My technical skills and expertise in frontend development (React, Next.js, TypeScript), backend development (Node.js, Express, NestJS), databases, DevOps, and system design.",
+      "keywords": "React, Next.js, TypeScript, Node.js, Express, NestJS, PostgreSQL, MongoDB, Docker, DevOps, TailwindCSS, Redux"
+    },
+    "projectDetails": {
+      "titleTemplate": "{projectTitle} | Mahmoud Saadaoui",
+      "keywords": "Web Development, Project Showcase, MERN Stack, React, Node.js, Portfolio"
+    }
+  },
   "footer": {
     "connect": "Let's connect",
     "rights": "All rights reserved"

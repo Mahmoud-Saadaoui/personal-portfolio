@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { skillsKeys } from "../data/data.skills";
 import Heading from "../components/common/Heading";
+import Meta from "../components/common/Meta";
 import { containerVariants, itemVariants } from "../utils/variants";
 
 const iconMap = {
@@ -25,52 +26,59 @@ const Skills = () => {
   const isRTL = i18n.language === "ar";
 
   return (
-    <section className={`py-4 px-4 sm:px-6 lg:px-8 bg-[var(--color-background)] overflow-hidden ${isRTL ? "text-right" : "text-left"}`}>
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <Heading title={t("navbar.skills")} icon={FaGraduationCap} />
+    <>
+      <Meta
+        title={t('seo.skills.title')}
+        description={t('seo.skills.description')}
+        keywords={t('seo.skills.keywords')}
+      />
+      <section className={`py-4 px-4 sm:px-6 lg:px-8 bg-[var(--color-background)] overflow-hidden ${isRTL ? "text-right" : "text-left"}`}>
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <Heading title={t("navbar.skills")} icon={FaGraduationCap} />
 
-        {/* Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
-        >
-          {skillsKeys.map((skill, index) => {
-            const fullText = t(skill.key);
-            const [title, description] = fullText.includes(":")
-              ? fullText.split(":").map(s => s.trim())
-              : [fullText, ""];
+          {/* Grid */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+          >
+            {skillsKeys.map((skill, index) => {
+              const fullText = t(skill.key);
+              const [title, description] = fullText.includes(":")
+                ? fullText.split(":").map(s => s.trim())
+                : [fullText, ""];
 
-            return (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className="group relative bg-[var(--color-surface)] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-[var(--color-text-muted)]/10 hover:-translate-y-1 hover:border-[var(--color-primary)]/30"
-              >
-                <div className={`absolute top-0 ${isRTL ? "left-0 rounded-br-2xl" : "right-0 rounded-bl-2xl"} w-24 h-24 bg-gradient-to-br from-[var(--color-primary)]/5 to-transparent -z-10 transition-all group-hover:scale-150`} />
+              return (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  className="group relative bg-[var(--color-surface)] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-[var(--color-text-muted)]/10 hover:-translate-y-1 hover:border-[var(--color-primary)]/30"
+                >
+                  <div className={`absolute top-0 ${isRTL ? "left-0 rounded-br-2xl" : "right-0 rounded-bl-2xl"} w-24 h-24 bg-gradient-to-br from-[var(--color-primary)]/5 to-transparent -z-10 transition-all group-hover:scale-150`} />
 
-                <div className="flex flex-col h-full">
-                  <div className="mb-4 text-4xl text-[var(--color-primary)] group-hover:scale-110 transition-transform duration-300 origin-left">
-                    {iconMap[skill.key]}
+                  <div className="flex flex-col h-full">
+                    <div className="mb-4 text-4xl text-[var(--color-primary)] group-hover:scale-110 transition-transform duration-300 origin-left">
+                      {iconMap[skill.key]}
+                    </div>
+
+                    <h3 className="text-xl font-bold text-[var(--color-text-main)] mb-3 group-hover:text-[var(--color-primary)] transition-colors">
+                      {title}
+                    </h3>
+
+                    <p className="text-[var(--color-text-muted)] leading-relaxed text-sm md:text-base">
+                      {description}
+                    </p>
                   </div>
-
-                  <h3 className="text-xl font-bold text-[var(--color-text-main)] mb-3 group-hover:text-[var(--color-primary)] transition-colors">
-                    {title}
-                  </h3>
-
-                  <p className="text-[var(--color-text-muted)] leading-relaxed text-sm md:text-base">
-                    {description}
-                  </p>
-                </div>
-              </motion.div>
-            );
-          })}
-        </motion.div>
-      </div>
-    </section>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
+      </section>
+    </>
   );
 };
 

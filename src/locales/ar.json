@@ -77,6 +77,27 @@
             }
         }
     },
+    "seo": {
+        "home": {
+            "title": "محمود سعداوي | مطور ويب",
+            "description": "مطور ويب متخصص في React و Next.js و Node.js و DevOps. بناء تطبيقات ويب سريعة وقابلة للتوسع وموثوقة مع بنية نظيفة وتجارب مستخدم سلسة.",
+            "keywords": "محمود سعداوي, مطور ويب, مطور React, Next.js, Node.js, TypeScript, تطوير الويب, DevOps, Docker, CI/CD"
+        },
+        "projects": {
+            "title": "أعمالي | محمود سعداوي",
+            "description": "استكشف معرض أعمالي في تطوير الويب بما في ذلك تطبيقات MERN stack ومشاريع React والحلول المتكاملة. شاهد أعمالي باستخدام React و Next.js و Node.js والتقنيات الحديثة.",
+            "keywords": "مشاريع تطوير الويب, MERN Stack, مشاريع React, معرض أعمال, JavaScript, TypeScript, مشاريع متكاملة"
+        },
+        "skills": {
+            "title": "المهارات | محمود سعداوي",
+            "description": "مهاراتي التقنية وخبرتي في تطوير الواجهة الأمامية (React, Next.js, TypeScript)، تطوير الواجهة الخلفية (Node.js, Express, NestJS)، قواعد البيانات، DevOps، وتصميم الأنظمة.",
+            "keywords": "React, Next.js, TypeScript, Node.js, Express, NestJS, PostgreSQL, MongoDB, Docker, DevOps, TailwindCSS, Redux"
+        },
+        "projectDetails": {
+            "titleTemplate": "{projectTitle} | محمود سعداوي",
+            "keywords": "تطوير الويب, عرض المشروع, MERN Stack, React, Node.js, معرض الأعمال"
+        }
+    },
     "footer": {
         "connect": "تواصل معي",
         "rights": "جميع الحقوق محفوظة"
