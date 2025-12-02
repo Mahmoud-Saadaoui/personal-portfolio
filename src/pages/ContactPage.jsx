@@ -56,8 +56,8 @@ const ContactPage = () => {
             />
 
             <section
-                className={`py-4 px-4 sm:px-6 lg:px-8 bg-[var(--color-background)] min-h-screen ${isRTL ? "text-right" : "text-left"
-                    }`}
+                className={`py-4 px-4 sm:px-6 lg:px-8 bg-[var(--color-background)] min-h-screen 
+                    ${isRTL ? "text-right" : "text-left"}`}
             >
                 <div className="max-w-4xl mx-auto">
                     {/* Header */}
@@ -86,24 +86,6 @@ const ContactPage = () => {
                         onFileRemove={handleRemoveFile}
                         formRef={formRef}
                     />
-
-                    {/* Direct Contact Info */}
-                    <motion.div
-                        variants={itemVariants}
-                        initial="hidden"
-                        animate="visible"
-                        className="mt-8 text-center"
-                    >
-                        <p className="text-[var(--color-text-muted)]">
-                            {t("footer.connect")}:{" "}
-                            <a
-                                href="mailto:contact.saadaouimahmoud@gmail.com"
-                                className="text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors font-medium"
-                            >
-                                contact.saadaouimahmoud@gmail.com
-                            </a>
-                        </p>
-                    </motion.div>
                 </div>
             </section>
         </>
