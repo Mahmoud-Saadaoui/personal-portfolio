@@ -98,6 +98,34 @@
       "keywords": "Web Development, Project Showcase, MERN Stack, React, Node.js, Portfolio"
     }
   },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Have a project in mind or just want to say hello? I'd love to hear from you!",
+    "form": {
+      "email": "Your Email",
+      "emailPlaceholder": "your.email@example.com",
+      "message": "Your Message",
+      "messagePlaceholder": "Tell me about your project or just say hi...",
+      "attachFile": "Attach File",
+      "fileSelected": "File selected:",
+      "removeFile": "Remove file",
+      "submit": "Send Message",
+      "sending": "Sending..."
+    },
+    "validation": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "messageRequired": "Message is required",
+      "messageMinLength": "Message must be at least 20 characters",
+      "fileTooLarge": "File size must be less than 5MB",
+      "fileTypeInvalid": "Only images, PDFs, and documents are allowed"
+    },
+    "messages": {
+      "success": "Message sent successfully! I'll get back to you soon.",
+      "error": "Failed to send message. Please try again or email me directly.",
+      "emailjsNotConfigured": "Email service not configured. Please contact the administrator."
+    }
+  },
   "footer": {
     "connect": "Let's connect",
     "rights": "All rights reserved"

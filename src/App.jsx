@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 import SkillsPage from "./pages/SkillsPage";
+import ContactPage from "./pages/ContactPage";
 import { Route, Routes } from "react-router-dom";
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/skills" element={<SkillsPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/projects/:id" element={<ProjectDetailsPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </MainLayout>
   );

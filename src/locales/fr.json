@@ -98,6 +98,34 @@
       "keywords": "Développement Web, Présentation Projet, MERN Stack, React, Node.js, Portfolio"
     }
   },
+  "contact": {
+    "title": "Contactez-moi",
+    "subtitle": "Vous avez un projet en tête ou vous voulez simplement dire bonjour ? J'aimerais avoir de vos nouvelles !",
+    "form": {
+      "email": "Votre Email",
+      "emailPlaceholder": "votre.email@exemple.com",
+      "message": "Votre Message",
+      "messagePlaceholder": "Parlez-moi de votre projet ou dites simplement bonjour...",
+      "attachFile": "Joindre un fichier",
+      "fileSelected": "Fichier sélectionné :",
+      "removeFile": "Supprimer le fichier",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours..."
+    },
+    "validation": {
+      "emailRequired": "L'email est requis",
+      "emailInvalid": "Veuillez entrer une adresse email valide",
+      "messageRequired": "Le message est requis",
+      "messageMinLength": "Le message doit contenir au moins 20 caractères",
+      "fileTooLarge": "La taille du fichier doit être inférieure à 5 Mo",
+      "fileTypeInvalid": "Seuls les images, PDF et documents sont autorisés"
+    },
+    "messages": {
+      "success": "Message envoyé avec succès ! Je vous répondrai bientôt.",
+      "error": "Échec de l'envoi du message. Veuillez réessayer ou m'envoyer un email directement.",
+      "emailjsNotConfigured": "Service d'email non configuré. Veuillez contacter l'administrateur."
+    }
+  },
   "footer": {
     "connect": "Connecte moi",
     "rights": "Tous droits sont reservés"
