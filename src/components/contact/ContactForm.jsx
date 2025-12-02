@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaPaperPlane } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
@@ -5,7 +6,7 @@ import { containerVariants, itemVariants } from "../../utils/variants";
 import ContactInput from "./ContactInput";
 import ContactTextarea from "./ContactTextarea";
 
-const ContactForm = ({
+const ContactForm = memo(({
     formData,
     errors,
     file,
@@ -84,6 +85,8 @@ const ContactForm = ({
             </form>
         </motion.div>
     );
-};
+});
+
+ContactForm.displayName = "ContactForm";
 
 export default ContactForm;

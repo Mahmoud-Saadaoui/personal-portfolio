@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { toast } from "react-toastify";
 import { sendEmail } from "../services/emailService";
@@ -19,7 +19,7 @@ export const useContactForm = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     // Validate email
-    const validateEmail = (email) => {
+    const validateEmail = useCallback((email) => {
         if (!email.trim()) {
             return t("contact.validation.emailRequired");
         }
@@ -27,10 +27,10 @@ export const useContactForm = () => {
             return t("contact.validation.emailInvalid");
         }
         return "";
-    };
+    }, [t]);
 
     // Validate message
-    const validateMessage = (message) => {
+    const validateMessage = useCallback((message) => {
         if (!message.trim()) {
             return t("contact.validation.messageRequired");
         }
@@ -38,10 +38,10 @@ export const useContactForm = () => {
             return t("contact.validation.messageMinLength");
         }
         return "";
-    };
+    }, [t]);
 
     // Validate file
-    const validateFile = (file) => {
+    const validateFile = useCallback((file) => {
         if (!file) return "";
 
         const maxSize = 5 * 1024 * 1024; // 5MB
@@ -64,21 +64,24 @@ export const useContactForm = () => {
         }
 
         return "";
-    };
+    }, [t]);
 
     // Handle input change
-    const handleChange = (e) => {
+    const handleChange = useCallback((e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
 
         // Clear error for this field
-        if (errors[name]) {
-            setErrors((prev) => ({ ...prev, [name]: "" }));
-        }
-    };
+        setErrors((prev) => {
+            if (prev[name]) {
+                return { ...prev, [name]: "" };
+            }
+            return prev;
+        });
+    }, []);
 
     // Handle file selection
-    const handleFileChange = (e) => {
+    const handleFileChange = useCallback((e) => {
         const selectedFile = e.target.files[0];
         if (selectedFile) {
             const fileError = validateFile(selectedFile);
@@ -90,16 +93,16 @@ export const useContactForm = () => {
                 setErrors((prev) => ({ ...prev, file: "" }));
             }
         }
-    };
+    }, [validateFile]);
 
     // Remove file
-    const handleRemoveFile = () => {
+    const handleRemoveFile = useCallback(() => {
         setFile(null);
         setErrors((prev) => ({ ...prev, file: "" }));
-    };
+    }, []);
 
     // Validate form
-    const validateForm = () => {
+    const validateForm = useCallback(() => {
         const newErrors = {};
 
         const emailError = validateEmail(formData.email);
@@ -113,10 +116,10 @@ export const useContactForm = () => {
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
-    };
+    }, [formData.email, formData.message, file, validateEmail, validateMessage, validateFile]);
 
     // Handle form submission
-    const handleSubmit = async (e) => {
+    const handleSubmit = useCallback(async (e) => {
         e.preventDefault();
 
         if (!validateForm()) {
@@ -157,7 +160,7 @@ export const useContactForm = () => {
         } finally {
             setIsSubmitting(false);
         }
-    };
+    }, [validateForm, formData.email, formData.message, t]);
 
     return {
         formData,

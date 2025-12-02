@@ -1,8 +1,9 @@
+import { memo } from "react";
 import { motion } from "framer-motion";
 import { FaPaperclip, FaTimes } from "react-icons/fa";
 import { itemVariants } from "../../utils/variants";
 
-const ContactTextarea = ({
+const ContactTextarea = memo(({
     label,
     name,
     value,
@@ -79,6 +80,8 @@ const ContactTextarea = ({
             )}
         </motion.div>
     );
-};
+});
+
+ContactTextarea.displayName = "ContactTextarea";
 
 export default ContactTextarea;

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { FaEnvelope } from "react-icons/fa";
@@ -27,12 +27,12 @@ const ContactPage = () => {
         handleSubmit
     } = useContactForm();
 
-    const onSubmit = async (e) => {
+    const onSubmit = useCallback(async (e) => {
         const success = await handleSubmit(e);
         if (success && formRef.current) {
             formRef.current.reset();
         }
-    };
+    }, [handleSubmit]);
 
     return (
         <>

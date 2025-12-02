@@ -1,7 +1,8 @@
+import { memo } from "react";
 import { motion } from "framer-motion";
 import { itemVariants } from "../../utils/variants";
 
-const ContactInput = ({
+const ContactInput = memo(({
     label,
     name,
     value,
@@ -46,6 +47,8 @@ const ContactInput = ({
             )}
         </motion.div>
     );
-};
+});
+
+ContactInput.displayName = "ContactInput";
 
 export default ContactInput;
