@@ -8,31 +8,34 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+
   build: {
-    // Enable source maps for production debugging
+    // Disable source maps in production
     sourcemap: false,
-    // Chunk size warning limit
+
+    // Increase chunk size warning limit
     chunkSizeWarningLimit: 1000,
-    // Minify options
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
+
+    // ✅ Use esbuild (faster & no Netlify error)
+    minify: 'esbuild',
+
     // Split vendor chunks for better caching
     rollupOptions: {
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'ui-vendor': ['framer-motion', 'react-icons'],
-          'i18n-vendor': ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
+          'i18n-vendor': [
+            'i18next',
+            'react-i18next',
+            'i18next-browser-languagedetector'
+          ],
         },
       },
     },
   },
-  // Optimize dependencies pre-bundling
+
+  // Optimize dependency pre-bundling
   optimizeDeps: {
     include: [
       'react',
