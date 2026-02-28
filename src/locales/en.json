@@ -20,6 +20,7 @@
   },
   "projects": {
     "title": "My Projects",
+    "subtitle": "Explore my latest work and side projects",
     "discoverMore": "Discover More",
     "notFound": "Project Not Found",
     "backToProjects": "Back to Projects",
@@ -29,6 +30,12 @@
     "category": "Category",
     "technologies": "Technologies",
     "technologiesUsed": "technologies used",
+    "cta": "Let's work together to bring your ideas to life",
+    "view": "View",
+    "filterLabel": "Filter:",
+    "noProjects": "No projects found for this filter",
+    "statsProjects": "Projects",
+    "statsTechnologies": "Technologies",
     "filters": {
       "all": "All",
       "javascript": "JavaScript",

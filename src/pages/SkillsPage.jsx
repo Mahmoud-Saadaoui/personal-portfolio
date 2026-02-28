@@ -11,6 +11,7 @@ import {
 import { skillsKeys } from "../data/data.skills";
 import Heading from "../components/common/Heading";
 import Meta from "../components/common/Meta";
+import Card from "../components/common/Card";
 import { containerVariants, itemVariants } from "../utils/variants";
 
 const iconMap = {
@@ -52,15 +53,11 @@ const Skills = () => {
                 : [fullText, ""];
 
               return (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  className="group relative bg-[var(--color-surface)] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-[var(--color-text-muted)]/10 hover:-translate-y-1 hover:border-[var(--color-primary)]/30"
-                >
-                  <div className={`absolute top-0 ${isRTL ? "left-0 rounded-br-2xl" : "right-0 rounded-bl-2xl"} w-24 h-24 bg-gradient-to-br from-[var(--color-primary)]/5 to-transparent -z-10 transition-all group-hover:scale-150`} />
-
+                <Card key={index} hover>
                   <div className="flex flex-col h-full">
-                    <div className="mb-4 text-4xl text-[var(--color-primary)] group-hover:scale-110 transition-transform duration-300 origin-left">
+                    <div className={`absolute top-0 ${isRTL ? "left-0 rounded-br-2xl" : "right-0 rounded-bl-2xl"} w-24 h-24 bg-[var(--color-primary-light)] -z-10 transition-transform group-hover:scale-150`} />
+
+                    <div className={`mb-4 text-4xl text-[var(--color-primary)] group-hover:scale-110 transition-transform duration-300 ${isRTL ? "origin-right" : "origin-left"}`}>
                       {iconMap[skill.key]}
                     </div>
 
@@ -72,7 +69,7 @@ const Skills = () => {
                       {description}
                     </p>
                   </div>
-                </motion.div>
+                </Card>
               );
             })}
           </motion.div>

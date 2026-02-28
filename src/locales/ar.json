@@ -2,7 +2,7 @@
     "navbar": {
         "about": "نبذة عنّي",
         "skills": "المؤهلات",
-        "projects": " سابقة الأعمال",
+        "projects": "سابقة الأعمال",
         "contact": "تواصل معي"
     },
     "about": {
@@ -20,6 +20,7 @@
     },
     "projects": {
         "title": "مشاريعي",
+        "subtitle": "اكتشف أحدث أعمالي ومشاريعي الجانبية",
         "discoverMore": "اكتشف المزيد",
         "notFound": "المشروع غير موجود",
         "backToProjects": "العودة إلى المشاريع",
@@ -29,6 +30,12 @@
         "category": "الفئة",
         "technologies": "التقنيات",
         "technologiesUsed": "تقنية مستخدمة",
+        "cta": "لنعمل معًا لتحويل أفكارك إلى واقع",
+        "view": "عرض",
+        "filterLabel": "تصفية:",
+        "noProjects": "لا توجد مشاريع لهذا الفلتر",
+        "statsProjects": "مشروع",
+        "statsTechnologies": "تقنيات",
         "filters": {
             "all": "الكل",
             "javascript": "Javascript",
@@ -53,7 +60,7 @@
             },
             "facebookClone": {
                 "title": "Facebook Clone",
-                "description": "مشروع واجهة أمامية حديث بـ React.js يبرز مهاراتي في الواجهات الديناميكية والتصميم البسيط."
+                "description": "مشروع واجهة أمامية حديثة بـ React.js يبرز مهاراتي في الواجهات الديناميكية والتصميم البسيط."
             },
             "libreMap": {
                 "title": "Libre Map",

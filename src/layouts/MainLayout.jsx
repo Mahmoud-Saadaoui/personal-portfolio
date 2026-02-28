@@ -7,13 +7,15 @@ const MainLayout = ({ children }) => {
     const { i18n } = useTranslation();
 
     useEffect(() => {
-        document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
+        const lang = i18n.language;
+        document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+        document.documentElement.lang = lang;
     }, [i18n.language]);
 
     return (
         <div
-            className="min-h-screen bg-(--color-background) dark:bg-(--color-background)
-        text-(--color-text-main) dark:text-(--color-text-main)
+            className="min-h-screen bg-[var(--color-background)]
+        text-[var(--color-text-main)]
         transition-colors duration-300"
         >
             <Header />

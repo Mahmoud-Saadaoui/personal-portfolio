@@ -8,5 +8,5 @@ export const navLinks = [
 export const LANGUAGES = [
   { code: "en", label: "English" },
   { code: "fr", label: "Français" },
-  { code: "ar", label: "العربية" },
+  { code: "ar", label: "العربية"},
 ];

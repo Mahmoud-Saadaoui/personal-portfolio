@@ -1,8 +1,8 @@
 {
   "navbar": {
     "about": "Intro",
-    "skills": "Competences",
-    "projects": "Projets ",
+    "skills": "Compétences",
+    "projects": "Projets",
     "contact": "Contact"
   },
   "about": {
@@ -20,6 +20,7 @@
   },
   "projects": {
     "title": "Mes Projets",
+    "subtitle": "Découvrez mes derniers travaux et projets personnels",
     "discoverMore": "Découvrir Plus",
     "notFound": "Projet Introuvable",
     "backToProjects": "Retour aux Projets",
@@ -29,6 +30,12 @@
     "category": "Catégorie",
     "technologies": "Technologies",
     "technologiesUsed": "technologies utilisées",
+    "cta": "Travaillons ensemble pour donner vie à vos idées",
+    "view": "Voir",
+    "filterLabel": "Filtrer :",
+    "noProjects": "Aucun projet trouvé pour ce filtre",
+    "statsProjects": "Projets",
+    "statsTechnologies": "Technologies",
     "filters": {
       "all": "Tous",
       "javascript": "JavaScript",
@@ -127,7 +134,7 @@
     }
   },
   "footer": {
-    "connect": "Connecte moi",
-    "rights": "Tous droits sont reservés"
+    "connect": "Connectez-vous",
+    "rights": "Tous droits réservés"
   }
 }
