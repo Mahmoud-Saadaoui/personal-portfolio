@@ -1,0 +1,8 @@
+/* Web font (Arabic-capable & suits RTL). Replace or remove per project needs. */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+
+@import "tailwindcss";
+
+body {
+  font-family: "Cairo", system-ui, sans-serif;
+}
