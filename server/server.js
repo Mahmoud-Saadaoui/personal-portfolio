@@ -3,6 +3,7 @@ import cors from "cors";
 import rateLimit from "express-rate-limit";
 import helmet from "helmet";
 import "dotenv/config";
+import authRouter from "./routes/auth.router.js";
 
 const app = express();
 
@@ -24,9 +25,10 @@ app.use(limiter);
 app.get("/", (req, res) => {
     res.json({ message: "Hello World!" });
 });
+app.use("/api", authRouter);
 
 // Start server
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
