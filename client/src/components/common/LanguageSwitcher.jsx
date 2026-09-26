@@ -7,7 +7,7 @@ const LANGUAGES = [
   { code: "ar", label: "عربي" },
 ];
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = ({ variant = "default" }) => {
   const { i18n } = useTranslation();
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
@@ -31,19 +31,20 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="relative" ref={ref}>
+    <div className={`relative language-switcher language-switcher-${variant}`} ref={ref}>
       <button
         type="button"
         onClick={() => setOpen((isOpen) => !isOpen)}
-        className="px-3 py-2 rounded border border-gray-200 text-sm text-gray-700 hover:bg-gray-50"
+        className="language-switcher-trigger"
         aria-haspopup="listbox"
         aria-expanded={open}
+        aria-label={current.label}
       >
         {current.label}
       </button>
       {open && (
         <ul
-          className="absolute top-full mt-1 start-0 w-full rounded border border-gray-200 bg-white shadow-lg"
+          className="language-switcher-menu"
           role="listbox"
         >
           {LANGUAGES.map((lang) => (
@@ -51,7 +52,7 @@ const LanguageSwitcher = () => {
               <button
                 type="button"
                 onClick={() => changeLanguage(lang.code)}
-                className={`w-full px-3 py-2 text-start text-sm hover:bg-gray-50 ${
+                className={`language-switcher-option ${
                   lang.code === i18n.language
                     ? "text-blue-600 font-semibold"
                     : "text-gray-700"

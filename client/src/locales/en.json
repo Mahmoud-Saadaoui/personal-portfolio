@@ -1,22 +1,121 @@
 {
   "brand": {
-    "name": "React Starter"
+    "name": "Personal Platform",
+    "firstName": "Mahmoud",
+    "lastName": "Saadaoui"
   },
   "nav": {
-    "home": "Home"
+    "label": "Main navigation",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "previous": "Previous section",
+    "next": "Next section",
+    "scrollHint": "Scroll to explore"
   },
-  "home": {
-    "title": "Hello World",
-    "description": "Welcome to the React Starter Kit. This page validates that routing, i18n, Tailwind CSS and the layout are wired up correctly."
+  "sections": {
+    "label": "Portfolio sections",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
   },
-  "demo": {
-    "language": "Detected language",
-    "direction": "Document direction",
-    "staks": "Environment",
-    "status": "Ready"
+  "about": {
+    "eyebrow": "Full Stack Engineer / 2026",
+    "title": "Full Stack Engineer",
+    "description": "I build fast, secure, and scalable web applications — from frontend interfaces to backend architecture and production deployment.",
+    "cta": "See the work",
+    "artCaption": "Interfaces made to be used, not just looked at.",
+    "sideLabel": "Introduction"
+  },
+  "skills": {
+    "eyebrow": "Tech Stack & Skills",
+    "title": "From concept to production.",
+    "description": "Architecture, development, CI/CD and production: a pragmatic engineering mindset built around clean code, security, performance and useful UX.",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "workflow": "Databases & DevOps",
+      "craft": "Tools"
+    }
+  },
+  "experience": {
+    "eyebrow": "Professional Experience",
+    "title": "Systems built for real use.",
+    "description": "Selected professional work across analytics, education and secure institutional platforms, where product thinking meets full-stack engineering.",
+    "items": {
+      "platform": {
+        "title": "AI Spreadsheet & Data Analytics",
+        "description": "Tawkeed.ai · Saudi Arabia — AI-powered spreadsheet features focused on data interaction and Arabic localization."
+      },
+      "cocktail": {
+        "title": "Internship & Student Performance Platform",
+        "description": "Groupe RIF · France — Internal platform for managing student projects, progress and evaluations."
+      },
+      "dashboard": {
+        "title": "Secure Military Logistics & HR Systems",
+        "description": "Ministry of National Defence · Tunisia — Internal platforms for institutional logistics and personnel management."
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Independent Projects",
+    "title": "How I build from zero.",
+    "description": "These side projects show how I think, structure an application and turn an idea into a complete product with a clear user experience.",
+    "links": {
+      "demo": "Live demo",
+      "code": "Source code"
+    },
+    "items": {
+      "landing": {
+        "title": "Landing Page Collection",
+        "description": "A central gallery of 27 converted React landing pages built with Vite, Tailwind CSS 4, React Router and i18next."
+      },
+      "blogApp": {
+        "title": "Blog Pro – Full-stack Blog Application",
+        "description": "An educational MERN application for creating, editing and managing blog posts with Cloudinary image uploads, JWT authentication and complete user management."
+      },
+      "pshop": {
+        "title": "PShop",
+        "description": "A complete MERN and Redux Toolkit eCommerce platform with product reviews, cart management, PayPal or card payments and an admin dashboard."
+      },
+      "chat": {
+        "title": "Realtime Chat App",
+        "description": "A TypeScript MERN messaging app with JWT authentication, email verification, Socket.IO real-time messaging, Cloudinary profiles and an installable PWA experience."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Talk soon?",
+    "title": "Let’s build something useful.",
+    "description": "A project, an idea or just a conversation? My inbox is open.",
+    "email": "Email me",
+    "sideLabel": "Contact"
+  },
+  "settings": {
+    "eyebrow": "Personalize",
+    "title": "Choose a color",
+    "description": "Change the interface accent color. Your choice is saved on this device.",
+    "colors": "Accent colors",
+    "coral": "Coral",
+    "lime": "Lime",
+    "violet": "Violet",
+    "blue": "Blue",
+    "reset": "Reset",
+    "open": "Open settings",
+    "close": "Close settings"
+  },
+  "blog": {
+    "eyebrow": "Notes & articles",
+    "title": "The blog is coming soon.",
+    "description": "I’m preparing a space for development notes, lessons learned and ideas about the web.",
+    "back": "Back to portfolio",
+    "status": "No articles published yet"
   },
   "footer": {
-    "copyright": "© {{year}} React Starter Kit",
+    "copyright": "© {{year}} Personal Platform",
     "slogan": "Multilingual • RTL-ready • Reusable"
   },
   "common": {

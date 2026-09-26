@@ -1,22 +1,121 @@
 {
   "brand": {
-    "name": "React Starter"
+    "name": "Personal Platform",
+    "firstName": "Mahmoud",
+    "lastName": "Saadaoui"
   },
   "nav": {
-    "home": "Accueil"
+    "label": "Navigation principale",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "previous": "Section précédente",
+    "next": "Section suivante",
+    "scrollHint": "Défiler pour explorer"
   },
-  "home": {
-    "title": "Bonjour le monde",
-    "description": "Bienvenue dans le React Starter Kit. Cette page valide que le routing, i18n, Tailwind CSS et le layout sont correctement connectés."
+  "sections": {
+    "label": "Sections du portfolio",
+    "about": "À propos",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "contact": "Contact"
   },
-  "demo": {
-    "language": "Langue détectée",
-    "direction": "Direction du document",
-    "staks": "Environnement",
-    "status": "Prêt"
+  "about": {
+    "eyebrow": "Ingénieur full-stack / 2026",
+    "title": "Ingénieur full-stack",
+    "description": "Je construis des applications web rapides, sécurisées et évolutives, des interfaces frontend à l’architecture backend et au déploiement en production.",
+    "cta": "Voir le travail",
+    "artCaption": "Des interfaces pensées pour être utilisées, pas seulement regardées.",
+    "sideLabel": "Présentation"
+  },
+  "skills": {
+    "eyebrow": "Stack technique & compétences",
+    "title": "Du concept à la production.",
+    "description": "Architecture, développement, CI/CD et production : une approche d’ingénierie centrée sur le code propre, la sécurité, la performance et une UX utile.",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "workflow": "Bases & DevOps",
+      "craft": "Outils"
+    }
+  },
+  "experience": {
+    "eyebrow": "Expériences professionnelles",
+    "title": "Des systèmes conçus pour le terrain.",
+    "description": "Une sélection de réalisations professionnelles dans l’analytique, l’éducation et les plateformes institutionnelles sécurisées, entre réflexion produit et ingénierie full-stack.",
+    "items": {
+      "platform": {
+        "title": "Tableur IA & analytique de données",
+        "description": "Tawkeed.ai · Arabie saoudite — Fonctionnalités de tableur assistées par IA, interaction avec les données et localisation arabe."
+      },
+      "cocktail": {
+        "title": "Plateforme de stages & suivi des étudiants",
+        "description": "Groupe RIF · France — Plateforme interne de gestion des projets, du suivi et des évaluations des étudiants."
+      },
+      "dashboard": {
+        "title": "Systèmes militaires de logistique & RH",
+        "description": "Ministère de la Défense nationale · Tunisie — Plateformes internes pour la logistique institutionnelle et la gestion du personnel."
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Projets personnels",
+    "title": "Ma façon de construire depuis zéro.",
+    "description": "Ces projets annexes montrent ma manière de réfléchir, de structurer une application et de transformer une idée en produit complet avec une expérience claire.",
+    "links": {
+      "demo": "Démo en ligne",
+      "code": "Code source"
+    },
+    "items": {
+      "landing": {
+        "title": "Collection de landing pages",
+        "description": "Une galerie centrale de 27 landing pages React converties avec Vite, Tailwind CSS 4, React Router et i18next."
+      },
+      "blogApp": {
+        "title": "Blog Pro – Application blog full-stack",
+        "description": "Une application MERN éducative pour créer, modifier et gérer des articles avec téléversement d’images via Cloudinary, authentification JWT et gestion complète des utilisateurs."
+      },
+      "pshop": {
+        "title": "PShop",
+        "description": "Une plateforme eCommerce complète avec MERN et Redux Toolkit : produits, panier, avis, paiements PayPal ou carte bancaire et dashboard administrateur."
+      },
+      "chat": {
+        "title": "Realtime Chat App",
+        "description": "Une application de messagerie MERN en TypeScript avec authentification JWT, vérification email, messages en temps réel via Socket.IO, profils Cloudinary et expérience PWA installable."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "On en parle ?",
+    "title": "Construisons quelque chose d’utile.",
+    "description": "Un projet, une idée ou simplement envie d’échanger ? Ma boîte mail est ouverte.",
+    "email": "M’écrire",
+    "sideLabel": "Contact"
+  },
+  "settings": {
+    "eyebrow": "Personnalisation",
+    "title": "Choisir une couleur",
+    "description": "Change la couleur d’accent de l’interface. Ton choix est conservé sur cet appareil.",
+    "colors": "Couleurs d’accent",
+    "coral": "Corail",
+    "lime": "Citron vert",
+    "violet": "Violet",
+    "blue": "Bleu",
+    "reset": "Réinitialiser",
+    "open": "Ouvrir les paramètres",
+    "close": "Fermer les paramètres"
+  },
+  "blog": {
+    "eyebrow": "Notes & articles",
+    "title": "Le blog arrive bientôt.",
+    "description": "Je prépare un espace pour partager des retours d’expérience, des notes de développement et des idées autour du web.",
+    "back": "Retour au portfolio",
+    "status": "Aucun article publié pour le moment"
   },
   "footer": {
-    "copyright": "© {{year}} React Starter Kit",
+    "copyright": "© {{year}} Personal Platform",
     "slogan": "Multilingue • RTL-ready • Réutilisable"
   },
   "common": {
